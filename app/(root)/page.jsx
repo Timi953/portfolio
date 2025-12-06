@@ -334,14 +334,14 @@ const MyPage = () => {
 									delay: 0.3,
 									type: "spring",
 								}}>
-								<a href="mailto:Alvalen.shafel04@gmail.com?subject=Hello&body=Hello Alvalens,">
-									alvalen.shafel04@gmail.com
+								<a href="mailto:tolumcev@gmail.com?subject=Hello&body=Hello Timi,">
+									tolumcev@gmail.com
 								</a>
 							</motion.p>
 							{/* icons */}
 							<div className="flex justify-center items-center space-x-4">
 								<motion.a
-									href="mailto:Alvalen.shafel04@gmail.com?subject=Hello&body=Hello Alvalens,"
+									href="mailto:tolumcev@gmail.com?subject=Hello&body=Hello Timi,"
 									className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
 									initial={{ y: 40, opacity: 0 }}
 									whileInView={{ y: 0, opacity: 1 }}
@@ -365,9 +365,8 @@ const MyPage = () => {
 									}}>
 									<FontAwesomeIcon icon={faGithub} className="text-3xl" />
 								</motion.a>
-								{/* TODO: Add Instagram link when available */}
-								{/* <motion.a
-									href="https://www.instagram.com/alvalens_/"
+								<motion.a
+									href="https://www.linkedin.com/in/timi-olumcev-951770205/"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
@@ -377,39 +376,8 @@ const MyPage = () => {
 										y: { delay: 0.3 },
 										opacity: { delay: 0.4 },
 									}}>
-									<FontAwesomeIcon
-										icon={faInstagram}
-										className="text-3xl"
-									/>
-								</motion.a> */}
-								{/* TODO: Add LinkedIn link when available */}
-								{/* <motion.a
-									href="https://www.linkedin.com/in/alvalen-shafel-8a081a254/"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-									initial={{ opacity: 0, y: 40 }}
-									whileInView={{ opacity: 1, y: 0 }}
-									transition={{
-										y: { delay: 0.4 },
-										opacity: { delay: 0.5 },
-									}}>
 									<FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
-								</motion.a> */}
-								{/* TODO: Add Discord link when available */}
-								{/* <motion.a
-									href="https://discordapp.com/users/bloody#6118"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
-									initial={{ opacity: 0, y: 40 }}
-									whileInView={{ opacity: 1, y: 0 }}
-									transition={{
-										y: { delay: 0.5 },
-										opacity: { delay: 0.6 },
-									}}>
-									<FontAwesomeIcon icon={faDiscord} className="text-3xl" />
-								</motion.a> */}
+								</motion.a>
 							</div>
 						</div>
 					</div>
