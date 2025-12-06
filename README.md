@@ -1,8 +1,8 @@
-# Alvalens Porto 2
+# Timi Olumcev - Portfolio
 
-![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=aleph-discord-bot.visitor-badge)
+![visitor badge](https://visitor-badge.laobi.icu/badge?page_id=timi-portfolio.visitor-badge)
 
-This is my debut project utilizing Next.js, a portfolio website featuring four primary sections: Home, About, Projects, and Contact. The site is brought to life with animations powered by Framer Motion, enhanced page transitions with Fullpage.js, and styled using elements of Tailwind CSS. This project also read list of project data from a JSON file. It serves as a showcase of my web development skills and represents my initial foray into web development with Next.js.
+This is Timi Olumcev's professional portfolio website built with Next.js, featuring four primary sections: Home, About, Projects, and Contact. The site is brought to life with animations powered by Framer Motion, enhanced page transitions with Fullpage.js, and styled using elements of Tailwind CSS. This project also reads list of project data from a JSON file. It serves as a showcase of Full Stack AI Development skills and expertise in AI-powered automation.
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
@@ -24,12 +24,12 @@ This is my debut project utilizing Next.js, a portfolio website featuring four p
 2. Clone the repository:
 
    ```shell
-   git clone https://github.com/Alvalens/Alvalens-porto-2-nextJs.git
+   git clone https://github.com/Timi953/timi-portfolio.git
    ```
 3. Navigate to the project directory:
 
    ```shell
-   cd Alvalens-porto-2-nextJs
+   cd timi-portfolio
    ```
 4. Install dependencies:
 
@@ -113,4 +113,4 @@ Contributions are welcome! If you find any issues or have suggestions, feel free
 
 This project is licensed under the GPL-3.0 License see the [LICENSE](LICENSE) file for details.
 
-Copyright (C) 2025 Alvalen Shafelbilyunazra
+Copyright (C) 2025 Timi Olumcev

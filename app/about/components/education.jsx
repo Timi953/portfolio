@@ -10,9 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import Me4 from "@/public/image/me4.jpeg";
-import Me5 from "@/public/image/me5.jpg";
-import Me6 from "@/public/image/me6.jpg";
+import EduHats from "@/public/image/edu-hats.jpg";
+import EduDiploma from "@/public/image/edu-diploma.jpg";
+import EduUniversity from "@/public/image/edu-university.jpg";
 
 function Wrapper({ children }) {
 	return (
@@ -43,87 +43,50 @@ export default function Education() {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const achievementsByYear = {
-		2025: [
-			{
-				icon: faMedal,
-				title: "1st place (Gold Medal)",
-				subtitle: "Fesmaro IT Business Competition",
-				date: "Mar 2025",
-				color: "from-yellow-400 to-orange-500",
-			},
-			{
-				icon: faAward,
-				title: "Finalist",
-				subtitle: "Hackfest Build to Billion 2025",
-				date: "Apr 2025",
-				color: "from-blue-500 to-purple-600",
-			},
-			{
-				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "Faculty of Engineering Most Outstanding Student",
-				date: "Feb 2025",
-				color: "from-amber-600 to-yellow-600",
-			},
-		],
 		2024: [
 			{
-				icon: faTrophy,
-				title: "Special Award | Gold Medal | Incubation Opportunity",
-				subtitle: "Indonesia Inventor Day 2024 (IID)",
-				date: "Aug 2024",
-				color: "from-yellow-400 to-orange-500",
-			},
-			{
-				icon: faMedal,
-				title: "1st place (Gold Medal)",
-				subtitle: "Tech & Trade Expo 2024",
-				date: "Jul 2024",
-				color: "from-yellow-400 to-orange-500",
-			},
-			{
-				icon: faMedal,
-				title: "2nd place (Silver Medal)",
-				subtitle: "IdeaFest 2024",
-				date: "Jul 2024",
-				color: "from-slate-400 to-slate-500",
-			},
-			{
 				icon: faAward,
-				title: "Finalist",
-				subtitle: "37th National Student Science Week (PIMNAS)",
-				date: "Oct 2024",
+				title: "Certified Software Tester (CSTE)",
+				subtitle: "Brainster",
+				date: "2024",
 				color: "from-blue-500 to-purple-600",
-			},
-			{
-				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "Student Digital Innovation Competition (LIDM)",
-				date: "Jun 2024",
-				color: "from-amber-600 to-yellow-600",
-			},
-			{
-				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "Fesmaro UI/UX Design",
-				date: "Jun 2024",
-				color: "from-amber-600 to-yellow-600",
 			},
 		],
-		2023: [
+		"LinkedIn": [
 			{
 				icon: faAward,
-				title: "Finalist",
-				subtitle: "36th National Student Science Week (PIMNAS)",
-				date: "Nov 2023",
-				color: "from-blue-500 to-purple-600",
+				title: "MySQL Skill Assessment",
+				subtitle: "LinkedIn Learning",
+				date: "LinkedIn",
+				color: "from-blue-400 to-cyan-500",
 			},
 			{
-				icon: faMedal,
-				title: "3rd place (Bronze Medal)",
-				subtitle: "FORKAFEST 3.0 Web Development competition",
-				date: "Jan 2023",
-				color: "from-amber-600 to-yellow-600",
+				icon: faAward,
+				title: "JSON Skill Assessment",
+				subtitle: "LinkedIn Learning",
+				date: "LinkedIn",
+				color: "from-blue-400 to-cyan-500",
+			},
+			{
+				icon: faAward,
+				title: "Object-Oriented Programming (OOP)",
+				subtitle: "LinkedIn Learning",
+				date: "LinkedIn",
+				color: "from-purple-500 to-pink-500",
+			},
+			{
+				icon: faAward,
+				title: "Agile Methodologies",
+				subtitle: "LinkedIn Learning",
+				date: "LinkedIn",
+				color: "from-green-500 to-teal-500",
+			},
+			{
+				icon: faAward,
+				title: "C# / .NET Skill Assessment",
+				subtitle: "LinkedIn Learning",
+				date: "LinkedIn",
+				color: "from-indigo-500 to-blue-600",
 			},
 		],
 	};
@@ -165,36 +128,36 @@ export default function Education() {
 						initial={{ opacity: 0, x: -50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}>
-						<div className="font-medium text-lg mb-4">2022 - Present</div>
+						<div className="font-medium text-lg mb-4">2011 - 2015</div>
 						<div>
 							<h2 className="font-semibold text-xl">
-								Universitas Negeri Malang
+								Universitatea OVIDIUS din Constanta
 							</h2>
 							<h3 className="text-md font-normal mb-3">
-								S1 Teknik Informatika | Computer Science
+								Diploma of Education, Medicine
 							</h3>
 							<div className="gap-4 mb-4 flex items-stretch md:h-[300px] xl:h-[400px]">
 								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
 									<Image
-										src={Me5}
+										src={EduHats}
 										width={400}
 										height={225}
-										alt="University"
+										alt="Graduation Hats"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
 								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
 									<Image
-										src={Me4}
+										src={EduDiploma}
 										width={400}
 										height={225}
-										alt="University"
+										alt="Diploma"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
 								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
 									<Image
-										src={Me6}
+										src={EduUniversity}
 										width={400}
 										height={225}
 										alt="University"
@@ -204,54 +167,41 @@ export default function Education() {
 							</div>
 							<div className="flex items-center gap-2">
 								<p className="text-gray-600 text-justify title text-lg">
-									Aspiring to become a professional Software Engineer, I&rsquo;m
-									currently pursuing my Bachelor&rsquo;s degree in{" "}
+									My academic journey began in{" "}
 									<span className="text-black font-medium">
-										Computer Science
+										medicine
 									</span>{" "}
 									at{" "}
 									<span className="text-black font-medium">
-										Universitas Negeri Malang
+										Universitatea OVIDIUS din Constanta, Romania
 									</span>
-									. My journey in tech is driven by curiosity and
-									creativity—combining web development with cutting-edge AI
-									research and implementation.
-									<br />
-									<br />
-									As the{" "}
+									. While my path eventually led me to technology and software development, the rigorous
+									training in medical sciences taught me{" "}
 									<span className="text-black font-medium">
-										Co-Lead of Google Developer Group on Campus (GDGoC)
+										attention to detail, systematic thinking, and the importance of continuous learning
+									</span>
+									—skills that serve me exceptionally well in AI development and automation today.
+									<br />
+									<br />
+									Transitioning from medicine to technology wasn&rsquo;t just a career change—it was discovering where
+									I truly belonged. The analytical mindset from my medical education combined with my passion for{" "}
+									<span className="text-black font-medium">
+										problem-solving and innovation
 									</span>{" "}
-									at my university, I&rsquo;ve led technical initiatives,
-									mentored peers, and helped build impactful digital solutions.
-									I&rsquo;ve actively participated in various{" "}
-									<span className="text-black font-medium">
-										national or international technology competitions
-									</span>
-									, earning recognition through awards such as{" "}
-									<span className="text-black font-medium">
-										PIMNAS Finalist, Indonesia Inventor Day Gold Medalist, Top 3
-										at LIDM 2024
-									</span>
-									, and more.
+									naturally led me to software development, where I could build systems that help people at scale.
 									<br />
-									<br />I am passionate about solving real-world problems
-									through code, especially at the intersection of{" "}
+									<br />
+									Today, I bring that same dedication to precision and reliability from medicine into every line of code I write,
+									ensuring that the AI systems and automation solutions I build are not just functional, but{" "}
 									<span className="text-black font-medium">
-										Web Development
-									</span>{" "}
-									and{" "}
-									<span className="text-black font-medium">
-										Artificial Intelligence
+										trustworthy and impactful
 									</span>
-									. Constantly learning, building, and collaborating—I&rsquo;m
-									excited to keep growing and contributing to the evolving tech
-									landscape.
+									.
 								</p>
 							</div>
 							<div className="flex flex-wrap gap-2 mt-4 text-sm">
 								<div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
-									GPA: 3.9 out of 4
+									Graduated: 2015
 								</div>
 							</div>
 						</div>
@@ -262,9 +212,9 @@ export default function Education() {
 						initial={{ opacity: 0, x: 50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}>
-						<h2 className="font-semibold text-xl mt-7">Achievements</h2>
+						<h2 className="font-semibold text-xl mt-7">Certifications & Training</h2>
 						<p className="text-md font-normal mb-3 md:mb-6">
-							Some of my achievements during my study.
+							Professional certifications and training programs completed.
 						</p>
 
 						{/* Achievements Container with transparent bottom effect */}

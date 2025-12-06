@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Card from "./spotify/card";
+// import Card from "./spotify/card"; // Spotify integration removed
 import { motion } from "framer-motion";
-import Me1 from "@/public/image/me1.jpg";
-import Me2 from "@/public/image/me2.jpg";
-import Me3 from "@/public/image/me3.jpg";
+import Me1 from "@/public/image/timi-about-main.jpg";
+import Me2 from "@/public/image/timi-about-deskIT.jpg";
+import Me3 from "@/public/image/timi-about-plant.jpg";
 import Hr from "@/components/Hr";
 
 function Title() {
@@ -35,7 +35,7 @@ export default function About() {
 								className="w-full h-full">
 								<Image
 									src={Me1}
-									alt="Alvalens"
+									alt="Timi Olumcev"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
@@ -58,7 +58,7 @@ export default function About() {
 								className="w-full h-full">
 								<Image
 									src={Me2}
-									alt="Alvalens"
+									alt="Timi Olumcev"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
@@ -83,7 +83,7 @@ export default function About() {
 								className="w-full h-full">
 								<Image
 									src={Me3}
-									alt="Alvalens"
+									alt="Timi Olumcev"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
@@ -108,38 +108,43 @@ export default function About() {
 						type: "spring",
 					}}>
 					<h2 className="text-2xl font-bold tracking-wider mb-3">
-						Alvalen Shafelbilyunazra
+						Timi Olumcev
 					</h2>
 					<p className="text-gray-600 text-justify title text-lg">
-						Hey there, I&rsquo;m Alvalen Shafelbilyunazra, a
+						Hey there, I&rsquo;m Timi Olumcev, a
 						<span className="text-black font-medium">
 							{" "}
-							passionate Web Developer
+							Full Stack AI Developer
 						</span>{" "}
-						with a growing expertise in
+						from
 						<span className="text-black font-medium">
 							{" "}
-							Artificial Intelligence.
+							Skopje, North Macedonia.
 						</span>{" "}
-						Hailing from Pasuruan, East Java, Indonesia, I&rsquo;m currently
-						pursuing my degree in{" "}
+						I started my career ensuring software works flawlessly — now I build systems that think for themselves.
+						<br /><br />
+						With a strong foundation in
 						<span className="text-black font-medium">
-							Computer Science
+							{" "}
+							automation and software reliability,
 						</span>{" "}
-						at{" "}
+						I transitioned into the AI space and never looked back. Today, I design and build SaaS and PaaS solutions powered by AI, helping clients solve unique problems with speed, scalability, and intelligence.
+						<br /><br />
+						I bring a
 						<span className="text-black font-medium">
-							Universitas Negeri Malang.
+							{" "}
+							&quot;nothing is impossible to build&quot;
 						</span>{" "}
-						My work bridges modern web technologies and intelligent systems—from
-						building responsive, scalable websites to exploring generative AI
-						and LLM-based solutions. Beyond development, I stay curious about
-						design and emerging technologies. In today&rsquo;s ever-changing
-						digital landscape, I believe being a
-						<span className="text-black font-medium"> lifelong learner</span> is
-						essential. Let&rsquo;s connect and explore the evolving intersection
-						of web and AI together!
+						mindset to every project — whether it&rsquo;s integrating LLMs into existing workflows, automating decision-making systems with N8n and Claude Code, or creating cloud-native applications on GCP and Amazon Bedrock that just work smarter.
+						<br /><br />
+						My approach?
+						<span className="text-black font-medium">
+							{" "}
+							Build fast, but build right.
+						</span>{" "}
+						Quality-first development rooted in reliability, fearless learning of new AI frameworks, and always focusing on value — reliability, security, and ROI at the core. I&rsquo;m passionate about where AI meets automation, and I&rsquo;m always looking for ways to push technology beyond what it&rsquo;s &quot;supposed&quot; to do.
 					</p>
-					<Card />
+					{/* <Card /> */}
 				</motion.div>
 			</div>
 		</>

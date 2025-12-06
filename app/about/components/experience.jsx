@@ -6,115 +6,63 @@ import { useState } from "react";
 const experiences = [
 	{
 		id: 1,
-		startDate: "Sep 2023",
-		endDate: "Jan 2024",
-		company: "Universitas Negeri Malang",
-		position: "Assistant Lecturer",
-		type: "Seasonal",
-		location: "Malang, Indonesia",
+		startDate: "Jun 2025",
+		endDate: "Present",
+		company: "Weber Media® Consulting GmbH",
+		position: "AI Automation Developer",
+		type: "Contract",
+		location: "Remote",
 		description:
-			"Assisted in teaching and mentoring students in algorithms and data structures, focusing on practical applications and problem-solving techniques. Developed course materials and provided support in lab sessions.",
-		skills: ["Python", "C", "Algorithms", "Data Structures", "Mentoring"],
+			"Building AI-powered automation systems, integrating LLMs into business workflows, and developing intelligent cloud-native applications. Working with cutting-edge AI technologies to deliver scalable automation solutions for clients.",
+		skills: ["N8n", "Claude Code", "Supabase", "Lovable AI", "MCP", "Stripe", "ElevenLabs", "Veo3", "Blotato", "Airtable", "GCP", "Amazon Bedrock", "Docker", "RAG"],
 	},
 	{
 		id: 2,
-		startDate: "Jul 2024",
-		endDate: "Jan 2025",
-		company: "Outlier AI",
-		position: "AI Trainer",
-		type: "Freelance (Remote)",
-		location: "Oakland, California",
+		startDate: "Dec 2021",
+		endDate: "Present",
+		company: "RLDatix & Allocate Macedonia",
+		position: "Automation Developer",
+		type: "Full-time",
+		location: "Skopje, North Macedonia",
 		description:
-			"Trained LLM models using RLFH, focusing on enhancing their understanding of human language and improving their response accuracy. Collaborated with a team of AI specialists to refine model performance and ensure high-quality outputs.",
-		skills: ["Generative AI", "RLFH", "LLM", "Prompt Engineering", "Teamwork"],
+			"Developed robust automation frameworks and pipelines, ensuring software reliability at scale. Built comprehensive automation suites using modern frameworks and CI/CD practices. Leading automation initiatives for healthcare software solutions.",
+		skills: ["Python", "Robot Framework", "Selenium WebDriver", "Jenkins", "GoCD", "GitHub", "CI/CD"],
 	},
 	{
 		id: 3,
-		startDate: "Jun 2023",
-		endDate: "Feb 2025",
-		company: "PUI-PT DLI",
-		position: "Fullstack Developer",
-		type: "Freelance",
-		location: "Malang, Indonesia",
+		startDate: "Sep 2021",
+		endDate: "Dec 2021",
+		company: "Causeway Connect",
+		position: "Software Developer",
+		type: "Full-time",
+		location: "Skopje, North Macedonia",
 		description:
-			"Crafted and maintained web applications using Laravel, ensuring high performance and responsiveness. Collaborated with designers and other  developers to create seamless user experiences.",
-		skills: ["Laravel", "MySQL", "PHP", "JavaScript", "Teamwork"],
+			"Developed automation solutions using C#/.NET stack with behavior-driven development practices. Implemented SpecFlow and NUnit frameworks for comprehensive test coverage.",
+		skills: ["C#", ".NET Framework", "SpecFlow", "NUnit", "Selenium WebDriver"],
 	},
 	{
 		id: 4,
-		startDate: "Apr 2025",
-		endDate: "Jul 2025",
-		company: "Vektorian Labophase",
-		position: "Front-end Developer",
-		type: "Freelance",
-		location: "Malang, Indonesia",
+		startDate: "Sep 2021",
+		endDate: "Dec 2021",
+		company: "CRMT Digital",
+		position: "Software Developer",
+		type: "Full-time",
+		location: "Skopje, North Macedonia",
 		description:
-			"Developed and maintained web applications using Next.js. Focused on creating responsive and user-friendly interfaces while ensuring backend functionality. Collaborated with backend and designers to implement modern UI/UX principles.",
-		skills: ["Next.js", "Typescript", "Teamwork"],
+			"Built automation frameworks and contributed to software development initiatives using modern methodologies. Focused on C# development with SpecFlow and Agile practices.",
+		skills: ["C#", ".NET Framework", "SpecFlow", "Agile Methodologies"],
 	},
 	{
 		id: 5,
-		startDate: "Apr 2023",
-		endDate: "Present",
-		company: "Self-Employed",
-		position: "Web Developer & AI Consultant",
-		type: "Freelance",
-		location: "Malang, Indonesia",
+		startDate: "Dec 2020",
+		endDate: "Dec 2021",
+		company: "dimITrycode",
+		position: "Junior Developer",
+		type: "Contract",
+		location: "Gevgelija, North Macedonia",
 		description:
-			"Developed 15+ web applications using Next.js, React, and Laravel. Provided AI consulting services, including creating custom LLMs. Focused on delivering high-quality, user-friendly applications and AI solutions.",
-		skills: [
-			"Next.js",
-			"React",
-			"Laravel",
-			"MySQL",
-			"PostgreSQL",
-			"MongoDB",
-			"JavaScript",
-			"TypeScript",
-			"Gemini AI",
-		],
-	},
-	{
-		id: 6,
-		startDate: "Aug 2023",
-		endDate: "Present",
-		company: "PT Hafdzamedia Teknologi Aplikasi",
-		position: "Fullstack Web Developer",
-		type: "Part-time",
-		location: "Malang, Indonesia",
-		description:
-			"Developed and maintained web applications using React, Next.js, and Laravel. Focused on creating responsive and user-friendly interfaces while ensuring backend functionality.",
-		skills: [
-			"React",
-			"Next.js",
-			"Laravel",
-			"MySQL",
-			"JavaScript",
-			"TypeScript",
-			"Teamwork",
-		],
-	},
-	{
-		id: 7,
-		startDate: "Feb 2025",
-		endDate: "Present",
-		company: "Joki Proyek",
-		position: "IT Implementation Specialist",
-		type: "Internship (Remote)",
-		location: "Malang, Indonesia",
-		description:
-			"Developed and maintained current internal web applications using Next.js & and Laravel. Fixed bugs and implemented new features to enhance user experience. Collaborated with the team to ensure smooth deployment and functionality of applications.",
-		skills: [
-			"Next.js",
-			"Laravel",
-			"MySQL",
-			"PostgreSQL",
-			"JavaScript",
-			"TypeScript",
-			"MongoDB",
-			"Docker",
-			"Teamwork",
-		],
+			"Started my development journey focusing on software lifecycle understanding and test-driven development practices. Gained foundational experience in SDLC and Agile methodologies.",
+		skills: ["SDLC", "Test Driven Development", "Agile Methodologies"],
 	},
 ];
 
@@ -192,7 +140,7 @@ function ExperienceCard({ experience, index, isEven }) {
 			{" "}
 			{/* Card */}
 			<div
-				className={`bg-white/20 backdrop-blur-sm border border-gray-300/30 rounded-2xl p-6 shadow-lg 
+				className={`bg-white/20 backdrop-blur-sm border border-gray-300/30 rounded-2xl p-6 shadow-lg
 				hover:shadow-xl hover:bg-white/30 transition-all duration-300 ml-12 md:ml-0`}>
 				{/* Company & Position */}
 				<div className="mb-4">
@@ -291,7 +239,7 @@ export default function Experience() {
 							transition={{ delay: 0.5 }}>
 							<button
 								onClick={() => setShowAll(!showAll)}
-								className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full font-medium 
+								className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full font-medium
 									transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
 								{showAll ? (
 									<>

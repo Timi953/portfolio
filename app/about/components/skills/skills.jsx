@@ -1,93 +1,37 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { CodepenIcon, WebhookIcon, ActivityIcon, MobileIcon } from "./icons"
+import { CodepenIcon, WebhookIcon, ActivityIcon, MobileIcon } from "./icons";
 
 const skillCategories = {
-	web: {
-		title: "Web Development",
-		icon: CodepenIcon,
-		description: "Building modern, responsive web applications",
-		languages: [
-			"HTML",
-			"CSS",
-			"JavaScript",
-			"TypeScript",
-			"PHP",
-			"Python",
-			"React",
-			"NextJS",
-			"TailwindCSS",
-			"Bootstrap",
-			"NodeJS",
-			"ExpressJS",
-			"Laravel",
-			"Flask",
-			"Django",
-			"Firebase"
-		],
-		tools: ["Visual Studio Code", "Git", "Github", "Figma", "Vite", "Docker", "Kubernetes", "Google Cloud", "Postman"],
-	},
-	api: {
-		title: "REST API",
-		icon: WebhookIcon,
-		description: "Creating robust and scalable backend services",
-		languages: [
-			"NodeJS",
-			"ExpressJS",
-			"PHP",
-			"Laravel",
-			"Python",
-			"FastAPI",
-			"Flask",
-			"Django",
-			"MySQL",
-			"PostgreSQL",
-			"MongoDB",
-			"Firebase",
-		],
-		tools: ["Postman", "Docker", "Kubernetes", "Swagger", "Git", "Github", "Google Cloud", "IBM Cloud"],
-	},
-	ai: {
-		title: "AI & Machine Learning",
+	aiAutomation: {
+		title: "AI & Automation",
 		icon: ActivityIcon,
-		description: "Developing intelligent solutions with ML/AI",
-		languages: [
-			"Python",
-			"TensorFlow",
-			"PyTorch",
-			"Scikit-learn",
-			"Pandas",
-			"NumPy",
-			"Jupyter",
-			"OpenAI API",
-			"Gemini API",
-			"LangChain",
-		],
-		tools: [
-			"Jupyter Notebook",
-			"Google Colab",
-			"Google Cloud AI",
-			"AWS SageMaker",
-			"IBM Watson",
-		],
+		description: "Building intelligent automation and agentic AI systems",
+		languages: ["Python", "Agentic AI", "RAG", "LangChain", "OpenAI API", "Anthropic Claude", "N8n", "MCP", "Claude Code"],
+		tools: ["Amazon Bedrock", "GCP AI Platform", "Supabase", "Docker", "Lovable AI"]
 	},
-	mobile: {
-		title: "Mobile Development",
+	cloudDev: {
+		title: "Cloud & Development",
+		icon: CodepenIcon,
+		description: "Full-stack development and cloud infrastructure",
+		languages: ["Python", "C#", ".NET", "HTML", "CSS", "JavaScript", "TypeScript", "SQL"],
+		tools: ["GCP", "Docker", "Supabase", "Git", "GitHub", "Visual Studio"]
+	},
+	testingQA: {
+		title: "Testing & QA",
+		icon: WebhookIcon,
+		description: "Test automation and quality assurance expertise",
+		languages: ["Selenium", "Robot Framework", "SpecFlow", "C#", "Python"],
+		tools: ["Jenkins", "Git", "Visual Studio", "Postman"]
+	},
+	integrations: {
+		title: "Integrations & Tools",
 		icon: MobileIcon,
-		description: "Cross-platform mobile app development",
-		languages: [
-			"React Native",
-			"JavaScript",
-			"TypeScript",
-			"Dart",
-			"Flutter",
-		],
-		tools: [
-			"Android Studio",
-			"React Native CLI",
-		],
-	},
+		description: "Third-party APIs and service integrations",
+		languages: ["Stripe API", "ElevenLabs", "REST APIs", "GraphQL"],
+		tools: ["Postman", "Swagger", "N8n", "Airtable"]
+	}
 };
 
 function SkillCard({ skill, isSelected, onClick }) {
@@ -204,7 +148,7 @@ function SkillDetails({ selectedSkill }) {
 }
 
 export default function Skills() {
-	const [selectedCategory, setSelectedCategory] = useState("web");
+	const [selectedCategory, setSelectedCategory] = useState("aiAutomation");
 	return (
 		<div className="relative">
 			<div className="mx-auto container px-6 py-20">

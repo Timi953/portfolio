@@ -1,12 +1,12 @@
 {
-  "name": "alvalen-portfolio-website",
+  "name": "timi-portfolio-website",
   "author": {
-    "name": "Alvalen Shafelbilyunazra",
-    "email": "alvalen.shafel04@gmail.com",
-    "url": "https://alvalens.my.id"
+    "name": "Timi Olumcev",
+    "email": "",
+    "url": "http://localhost:3000"
   },
   "license": "GPL-3.0",
-  "copyright": "Copyright (C) 2025 Alvalen Shafelbilyunazra",
+  "copyright": "Copyright (C) 2025 Timi Olumcev",
   "version": "1.0.0",
   "private": true,
   "scripts": {

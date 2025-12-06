@@ -15,8 +15,8 @@ import { FullpageProvider } from "@/context/FullpageContext";
 import Button from "@/components/Button";
 import Sidebar from "@/components/Sidebar";
 import Me from "@/public/image/me.jpg";
-import MeAbout from "@/public/image/me2.jpg";
-import Setup from "@/public/image/setup.jpg";
+import MeAbout from "@/public/image/timi-about-main.jpg";
+import Setup from "@/public/image/contact-desk.jpg";
 import ProjectAll from "@/public/image/projects.png";
 import Hr from "@/components/Hr";
 
@@ -66,7 +66,7 @@ const MyPage = () => {
 									delay: 0.2,
 									type: "spring",
 								}}>
-								Alvalen Shafel
+								Timi Olumcev
 							</motion.h3>
 							<motion.h1
 								className="text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
@@ -76,7 +76,7 @@ const MyPage = () => {
 									delay: 0.3,
 									type: "spring",
 								}}>
-								Full Stack Developer
+								Full Stack AI Developer
 							</motion.h1>
 							<motion.p
 								className="title text-md  2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]"
@@ -86,11 +86,11 @@ const MyPage = () => {
 									delay: 0.4,
 									type: "spring",
 								}}>
-								Hi! I&rsquo;am Alvalen, A junior fullstack developer specializing in
-								modern Web Development with a growing focus on Artificial
-								Intelligence. Passionate about building scalable,
-								user-friendly web applications and exploring AI technologies
-								such as generative models and LLM integration.
+								Hi! I&rsquo;m Timi, a Full Stack AI Developer specializing in
+								AI-powered SaaS/PaaS solutions and intelligent automation.
+								With a background in QA and test automation, I now focus on
+								building scalable AI systems, LLM integrations, and agentic
+								workflows that solve real-world problems.
 							</motion.p>
 							<motion.div
 								className="buttons flex flex-row justify-center items-center space-x-4 mt-10"
@@ -139,7 +139,7 @@ const MyPage = () => {
 					<div className="relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden">
 						<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 							<motion.div
-								className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
+								className="bg-slate-300 rounded-2xl h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 overflow-hidden"
 								initial={{
 									x: 300,
 									opacity: 0,
@@ -159,8 +159,8 @@ const MyPage = () => {
 								<Image
 									src={MeAbout}
 									layout="fill"
-									className="object-cover"
-									alt="Alvalens"
+									className="object-cover rounded-2xl"
+									alt="Timi Olumcev"
 									placeholder="blur"
 								/>
 							</motion.div>
@@ -205,7 +205,7 @@ const MyPage = () => {
 					<div className="relative md:h-screen w-screen gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
 						<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 							<motion.div
-								className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 "
+								className="bg-slate-300 rounded-2xl h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 overflow-hidden"
 								initial={{
 									x: 300,
 									opacity: 0,
@@ -225,8 +225,8 @@ const MyPage = () => {
 								<Image
 									src={ProjectAll}
 									layout="fill"
-									className="object-cover"
-									alt="Alvalens Setup"
+									className="object-cover rounded-2xl"
+									alt="Timi Olumcev Projects"
 									placeholder="blur"
 								/>
 							</motion.div>
@@ -275,7 +275,7 @@ const MyPage = () => {
 					<div className="relative md:h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
 						<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 							<motion.div
-								className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
+								className="bg-slate-300 rounded-2xl h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 overflow-hidden"
 								initial={{
 									x: 300,
 									opacity: 0,
@@ -295,8 +295,8 @@ const MyPage = () => {
 								<Image
 									src={Setup}
 									layout="fill"
-									className="object-cover"
-									alt="Alvalens Setup"
+									className="object-cover rounded-2xl"
+									alt="Timi Olumcev Setup"
 									placeholder="blur"
 								/>
 							</motion.div>
@@ -353,7 +353,7 @@ const MyPage = () => {
 								</motion.a>
 
 								<motion.a
-									href="https://github.com/Alvalens"
+									href="https://github.com/Timi953"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="flex justify-center items-center bg-gray-700 w-14 h-14 rounded-full text-gray-100 hover:bg-gray-400 transition-all ease-in-out duration-300"
@@ -365,7 +365,8 @@ const MyPage = () => {
 									}}>
 									<FontAwesomeIcon icon={faGithub} className="text-3xl" />
 								</motion.a>
-								<motion.a
+								{/* TODO: Add Instagram link when available */}
+								{/* <motion.a
 									href="https://www.instagram.com/alvalens_/"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -380,8 +381,9 @@ const MyPage = () => {
 										icon={faInstagram}
 										className="text-3xl"
 									/>
-								</motion.a>
-								<motion.a
+								</motion.a> */}
+								{/* TODO: Add LinkedIn link when available */}
+								{/* <motion.a
 									href="https://www.linkedin.com/in/alvalen-shafel-8a081a254/"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -393,8 +395,9 @@ const MyPage = () => {
 										opacity: { delay: 0.5 },
 									}}>
 									<FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
-								</motion.a>
-								<motion.a
+								</motion.a> */}
+								{/* TODO: Add Discord link when available */}
+								{/* <motion.a
 									href="https://discordapp.com/users/bloody#6118"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -406,7 +409,7 @@ const MyPage = () => {
 										opacity: { delay: 0.6 },
 									}}>
 									<FontAwesomeIcon icon={faDiscord} className="text-3xl" />
-								</motion.a>
+								</motion.a> */}
 							</div>
 						</div>
 					</div>

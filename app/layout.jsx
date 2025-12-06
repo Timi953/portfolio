@@ -5,46 +5,47 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import "./nprogress.css";
 import { Analytics } from "@vercel/analytics/react";
-import Chat from "@/components/Chat";
+// import Chat from "@/components/Chat"; // Chat feature temporarily disabled
 import ClientTopProgressBar from "@/components/ClientTopProgressBar";
 
 export const metadata = {
-    title: "Alvalens | Portofolio",
+    title: "Timi Olumcev | Portfolio",
 
     description:
-		"My name is Alvalens, I'm a web developer and I'm passionate about it. I'm currently studying at Universitas Negeri Malang.",
+		"I'm Timi Olumcev, a Full Stack AI Developer from Skopje, North Macedonia. I specialize in AI-powered SaaS/PaaS solutions, LLM integrations, and automation.",
 
-    author: "Alvalen Shafelbilyunazra",
-    siteUrl: "https://www.alvalens.my.id",
-    applicationName: "Alvalens",
+    author: "Timi Olumcev",
+    siteUrl: "http://localhost:3000",
+    applicationName: "Timi Olumcev",
 
     keywords: [
-		"alvalens",
-		"alvalen",
-		"alvalen shafel",
-		"shafel",
-		"alvalen shafelbilyunazra",
-		"alvalen shafel bilyunazra",
-		"bloodfallen",
-		"alvalen porto",
-		"alvalen um",
+		"timi olumcev",
+		"timi",
+		"olumcev",
+		"full stack ai developer",
+		"ai automation",
+		"llm integration",
+		"skopje developer",
+		"north macedonia developer",
+		"ai saas",
+		"automation developer",
 	],
 
     openGraph: {
 		type: "website",
-		url: "https://www.alvalens.my.id",
-		title: "Alvalens | Portofolio",
-		site_name: "Alvalens | Portofolio",
-		description: "My name is Alvalens, This is my portofolio website.",
+		url: "http://localhost:3000",
+		title: "Timi Olumcev | Portfolio",
+		site_name: "Timi Olumcev | Portfolio",
+		description: "I'm Timi Olumcev, a Full Stack AI Developer specializing in AI-powered solutions and intelligent automation.",
 		width: 1200,
 		height: 630,
 		images: [
 			{
 				url: "/og-image-rev.png",
-				alt: "Alvalens Portofolio",
+				alt: "Timi Olumcev Portfolio",
 			},
 		],
-		site_name: "Alvalens | Portofolio",
+		site_name: "Timi Olumcev | Portfolio",
 	}
 };
 
@@ -55,7 +56,7 @@ export default function RootLayout({ children }) {
 				<ClientTopProgressBar />
 				<Navbar />
 				{children}
-				<Chat />
+				{/* <Chat /> Chat feature temporarily disabled */}
 				<Analytics />
 			</body>
 		</html>
