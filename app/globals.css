@@ -35,19 +35,24 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Jost', sans-serif !important;
 }
 
+/* Scroll snap container */
+.scroll-container {
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
 .section {
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
 }
 
 .navbar {
 	z-index: 49 !important;
-}
-
-.fp-watermark {
-	display: none !important;
 }
 
 
