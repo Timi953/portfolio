@@ -1,8 +1,8 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
 	enabled: process.env.ANALYZE === "true",
 });
-module.exports = withBundleAnalyzer({
-	// your Next.js configuration
+
+const nextConfig = {
 	images: {
 		remotePatterns: [
 			{
@@ -10,17 +10,8 @@ module.exports = withBundleAnalyzer({
 				hostname: "i.scdn.co",
 			},
 		],
-		// Add image optimization settings
 		formats: ["image/avif", "image/webp"],
 		minimumCacheTTL: 60,
-	},
-	webpack: (config, options) => {
-		config.module.rules.push({
-			test: /\.pdf$/i,
-			type: "asset/source",
-		});
-
-		return config;
 	},
 	async headers() {
 		return [
@@ -33,7 +24,7 @@ module.exports = withBundleAnalyzer({
 					},
 					{
 						key: "Cache-Control",
-						value: "public, max-age=3600", // Cache for 1 hour
+						value: "public, max-age=3600",
 					},
 				],
 			},
@@ -56,7 +47,6 @@ module.exports = withBundleAnalyzer({
 			},
 		];
 	},
-	// Add performance optimizations
 	reactStrictMode: true,
 	compiler: {
 		removeConsole:
@@ -66,4 +56,10 @@ module.exports = withBundleAnalyzer({
 				  }
 				: false,
 	},
-});
+};
+
+// Only wrap with bundle analyzer when analyzing builds
+// This prevents webpack warning when using Turbopack in development
+module.exports = process.env.ANALYZE === "true"
+	? withBundleAnalyzer(nextConfig)
+	: nextConfig;
