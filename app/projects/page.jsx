@@ -6,9 +6,9 @@ import Button from "@/components/Button";
 import Image from "next/image";
 
 // images
-import Intervyou1 from "@/public/image/projects/web/intervyou/intervyou-1.png";
-import Intervyou2 from "@/public/image/projects/web/intervyou/intervyou-2.png";
-import Intervyou3 from "@/public/image/projects/web/intervyou/intervyou-3.png";
+import SmartShelf1 from "@/public/image/projects/web/smartshelf/smartshelf-1.png";
+import SmartShelf2 from "@/public/image/projects/web/smartshelf/smartshelf-2.png";
+import SmartShelf3 from "@/public/image/projects/web/smartshelf/smartshelf-3.png";
 import ProjectAll from "@/public/image/projects.png";
 
 import Hr from "@/components/Hr";
@@ -99,8 +99,8 @@ export default function Page() {
 									}}
 									className="w-full h-full shadow-lg">
 									<Image
-										src={Intervyou1}
-										alt="Alvalens"
+										src={SmartShelf1}
+										alt="SmartShelf"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
@@ -123,8 +123,8 @@ export default function Page() {
 									transition={{ delay: 0.3 }}
 									className="w-full h-full shadow-lg ">
 									<Image
-										src={Intervyou3}
-										alt="Alvalens"
+										src={SmartShelf2}
+										alt="SmartShelf"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
@@ -149,8 +149,8 @@ export default function Page() {
 									}}
 									className="w-full h-full shadow-lg">
 									<Image
-										src={Intervyou2}
-										alt="Alvalens"
+										src={SmartShelf3}
+										alt="SmartShelf"
 										layout="fill"
 										objectFit="cover"
 										placeholder="blur"
@@ -174,25 +174,21 @@ export default function Page() {
 							type: "spring",
 						}}>
 						<h2 className="text-2xl font-bold tracking-wider mb-3">
-							Intervyou AI
+							SmartShelf
 						</h2>
 						<p className="text-gray-600 text-justify title text-lg">
-							AI Based interview Preparation Website created to help fresh
-							graduates and job seekers prepare for interviews and optimize
-							their CV through AI-powered features. The website is built using
-							Next.js, TypeScript, Tailwind CSS, Shadcn UI, Prisma, and MySQL
-							(TiDB). This website can comprehensively analyze the user&apos;s
-							interview performance by providing a analysis of the user&apos;s
-							answer, gesture, and material recommendation to improve the user&apos;s
-							interview skills.
+							SmartShelf is an AI-powered e-commerce platform designed to
+							revolutionize online retail. Featuring intelligent inventory
+							management, an AI shopping assistant that helps customers find
+							exactly what they need, and automated order and payment
+							processing, SmartShelf streamlines the entire shopping
+							experience. Built with modern web technologies, it delivers
+							seamless interactions for both merchants and customers.
 						</p>{" "}
 						<div className="mt-3">
 							<Button variation="primary">
-								<Link href="projects/intervyou">More</Link>
-							</Button>
-							<Button variation="secondary">
 								<a
-									href="https://www.intervyou.me"
+									href="https://smartshelf.cloud"
 									target="_blank"
 									rel="noopener noreferrer">
 									Preview
