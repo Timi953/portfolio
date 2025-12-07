@@ -22,7 +22,7 @@ const Sidebar = () => {
 
 	return (
 		<div
-			className={`hidden md:flex fixed z-40 bg-gray-700 h-[50vh] flex-col justify-between items-center p-4 left-0 top-1/4 rounded-e-3xl transition-all duration-300 ease-out ${isHovered ? "w-16" : "w-14"}`}
+			className={`hidden md:flex fixed z-40 bg-gray-700 h-[50vh] flex-col justify-between items-center p-4 left-0 top-1/4 rounded-e-3xl transition-[width] duration-300 ease-out ${isHovered ? "w-16" : "w-14"}`}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}>
 			<ul

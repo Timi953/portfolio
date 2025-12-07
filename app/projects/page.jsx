@@ -86,7 +86,7 @@ export default function Page() {
 				<div className="relative w-screen mx-auto container gap-4 px-10 grid grid-cols-1 md:grid-cols-2 mb-10">
 					<div className="flex justify-center items-start flex-col mb-5 ">
 						<div className="images relative w-full  aspect-square">
-							<div className="absolute top-28 left-10 h-[40%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150 z-10">
+							<div className="absolute top-28 left-10 h-[40%]  aspect-video grayscale hover:grayscale-0 transition-[filter] ease duration-300 hover:scale-150 z-10">
 								<motion.div
 									initial={{ opacity: 0, scale: 0.5, x: 100 }}
 									whileInView={{
@@ -105,7 +105,7 @@ export default function Page() {
 									/>
 								</motion.div>
 							</div>
-							<div className="absolute top-10 right-28 h-[30%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150">
+							<div className="absolute top-10 right-28 h-[30%]  aspect-video grayscale hover:grayscale-0 transition-[filter] ease duration-300 hover:scale-150">
 								<motion.div
 									initial={{
 										opacity: 0,
@@ -129,7 +129,7 @@ export default function Page() {
 									/>
 								</motion.div>
 							</div>
-							<div className="absolute bottom-10 md:bottom-26 right-20 h-[35%]  aspect-video grayscale hover:grayscale-0 transition-all ease duration-300 hover:scale-150">
+							<div className="absolute bottom-10 md:bottom-26 right-20 h-[35%]  aspect-video grayscale hover:grayscale-0 transition-[filter] ease duration-300 hover:scale-150">
 								<motion.div
 									initial={{
 										opacity: 0,

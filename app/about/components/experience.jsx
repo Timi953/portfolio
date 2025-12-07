@@ -203,7 +203,7 @@ export default function Experience() {
 					<div className="md:hidden absolute left-0 w-1 bg-gradient-to-b from-black dark:from-white via-gray-400 to-transparent h-full"></div>{" "}
 					{/* Experience cards */}
 					<div className="space-y-12 md:space-y-16 relative">
-						<AnimatePresence>
+						<AnimatePresence mode="wait">
 							{displayedExperiences.map((experience, index) => (
 								<div key={experience.id} className="relative">
 									{/* Timeline period card - flows naturally above content */}

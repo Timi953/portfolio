@@ -39,6 +39,7 @@ export default function Page() {
 							initial={{ scale: 1 }}
 							animate={{ scale: 1.6 }}
 							transition={{ ease: "circOut", duration: 1 }}
+							style={{ willChange: 'transform' }}
 							className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 ">
 							<Image
 								src={Hero}

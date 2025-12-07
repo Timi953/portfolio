@@ -46,8 +46,7 @@ function SkillCard({ skill, isSelected, onClick }) {
 					: "bg-white/10 dark:bg-gray-800/20 border-gray-300/20 dark:border-gray-600/20 hover:bg-white/20 dark:hover:bg-gray-700/30 hover:border-gray-300/30"
 			}`}
 			whileHover={{
-				scale: 1.05,
-				rotateY: 5,
+				scale: 1.03,
 			}}
 			whileTap={{ scale: 0.95 }}
 			initial={{ opacity: 0, y: 20 }}

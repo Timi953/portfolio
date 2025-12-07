@@ -137,7 +137,7 @@ export default function Education() {
 								Diploma of Education, Medicine
 							</h3>
 							<div className="gap-4 mb-4 flex items-stretch md:h-[300px] xl:h-[400px]">
-								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
+								<div className="flex-[1] transition-[flex,filter] duration-300 ease-in-out hover:flex-[3] group">
 									<Image
 										src={EduHats}
 										width={400}
@@ -146,7 +146,7 @@ export default function Education() {
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
-								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
+								<div className="flex-[1] transition-[flex,filter] duration-300 ease-in-out hover:flex-[3] group">
 									<Image
 										src={EduDiploma}
 										width={400}
@@ -155,7 +155,7 @@ export default function Education() {
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
-								<div className="flex-[1] transition-all duration-300 ease-in-out hover:flex-[3] group">
+								<div className="flex-[1] transition-[flex,filter] duration-300 ease-in-out hover:flex-[3] group">
 									<Image
 										src={EduUniversity}
 										width={400}
@@ -221,7 +221,7 @@ export default function Education() {
 						<div className="relative">
 							<div className="space-y-4">
 								{/* Show visible achievements */}
-								<AnimatePresence>
+								<AnimatePresence mode="wait">
 									{visibleAchievements.map((achievement, index) => (
 										<motion.div
 											key={`${achievement.year}-${index}`}

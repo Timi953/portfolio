@@ -41,15 +41,11 @@ export default function Quote() {
 							key={index}
 							initial={{
 								opacity: 0,
-								filter: "blur(4px)",
-								scale: 0.92,
+								scale: 0.95,
 							}}
 							animate={{
 								opacity: isIntersecting ? 1 : 0,
-								filter: isIntersecting
-									? "blur(0px)"
-									: "blur(4px)",
-								scale: isIntersecting ? 1 : 0.92,
+								scale: isIntersecting ? 1 : 0.95,
 							}}
 							transition={{
 								delay: isIntersecting ? index * 0.1 : 0,
@@ -65,15 +61,11 @@ export default function Quote() {
 							key={index + text1.length}
 							initial={{
 								opacity: 0,
-								filter: "blur(4px)",
-								scale: 0.92,
+								scale: 0.95,
 							}}
 							animate={{
 								opacity: isIntersecting ? 1 : 0,
-								filter: isIntersecting
-									? "blur(0px)"
-									: "blur(4px)",
-								scale: isIntersecting ? 1 : 0.92,
+								scale: isIntersecting ? 1 : 0.95,
 							}}
 							transition={{
 								delay: isIntersecting
