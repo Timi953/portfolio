@@ -53,7 +53,7 @@ const MyPage = () => {
 										width={500}
 										height={500}
 										className="rounded-full w-full h-full object-cover "
-										alt="Alvalens"
+										alt="Timi Olumcev"
 										placeholder="blur"
 									/>
 								</div>
@@ -102,7 +102,7 @@ const MyPage = () => {
 								}}>
 								<Button variation="primary">
 									<Link
-										href={"/docs/cv.pdf"}
+										href={"/cv.pdf"}
 										target="_blank"
 										rel="noopener noreferrer"
 										download>
@@ -128,7 +128,7 @@ const MyPage = () => {
 									width={400}
 									height={550}
 									placeholder="blur"
-									alt="Alvalens"
+									alt="Timi Olumcev"
 									className="rounded-full w-full h-full object-cover"
 								/>
 							</div>
