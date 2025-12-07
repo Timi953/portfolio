@@ -69,7 +69,7 @@ const MyPage = () => {
 								Timi Olumcev
 							</motion.h3>
 							<motion.h1
-								className="text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
+								className="text-black dark:text-white text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
@@ -136,38 +136,10 @@ const MyPage = () => {
 					</div>
 				</section>
 				<section id="about" className="section">
-					<div className="relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden">
-						<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
-							<motion.div
-								className="bg-slate-300 rounded-2xl h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 overflow-hidden"
-								initial={{
-									x: 300,
-									opacity: 0,
-									z: -100,
-								}}
-								whileInView={{
-									x: 0,
-									opacity: 1,
-									z: 0,
-								}}
-								transition={{
-									delay: 0.5,
-									type: "spring",
-									stiffness: 100,
-									damping: 20,
-								}}>
-								<Image
-									src={MeAbout}
-									layout="fill"
-									className="object-cover rounded-2xl"
-									alt="Timi Olumcev"
-									placeholder="blur"
-								/>
-							</motion.div>
-						</div>
-						<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
+					<div className="w-screen min-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-20 items-center">
+						<div className="flex flex-col justify-center items-start text-start order-2 md:order-1">
 							<motion.h1
-								className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+								className="text-black dark:text-white text-5xl md:text-8xl font-bold"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
@@ -178,7 +150,7 @@ const MyPage = () => {
 							</motion.h1>
 							<Hr />
 							<motion.p
-								className="title  text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5"
+								className="title text-xl mt-4 tracking-wider text-gray-500 dark:text-gray-400 leading-[1.7rem] mb-5"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
@@ -199,41 +171,39 @@ const MyPage = () => {
 								</Button>
 							</motion.div>
 						</div>
-					</div>
-				</section>
-				<section id="projects" className="section">
-					<div className="relative md:h-screen w-screen gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
-						<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
+						<div className="flex justify-center items-center order-1 md:order-2">
 							<motion.div
-								className="bg-slate-300 rounded-2xl h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 overflow-hidden"
+								className="bg-slate-300 rounded-2xl h-[400px] md:h-[500px] w-full max-w-[400px] grayscale hover:grayscale-0 overflow-hidden relative"
 								initial={{
-									x: 300,
+									x: 100,
 									opacity: 0,
-									z: -100,
 								}}
 								whileInView={{
 									x: 0,
 									opacity: 1,
-									z: 0,
 								}}
 								transition={{
-									delay: 0.5,
+									delay: 0.3,
 									type: "spring",
 									stiffness: 100,
 									damping: 20,
 								}}>
 								<Image
-									src={ProjectAll}
+									src={MeAbout}
 									layout="fill"
 									className="object-cover rounded-2xl"
-									alt="Timi Olumcev Projects"
+									alt="Timi Olumcev"
 									placeholder="blur"
 								/>
 							</motion.div>
 						</div>
-						<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
+					</div>
+				</section>
+				<section id="projects" className="section">
+					<div className="w-screen min-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-20 items-center">
+						<div className="flex flex-col justify-center items-start text-start order-2 md:order-1">
 							<motion.h1
-								className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+								className="text-black dark:text-white text-5xl md:text-8xl font-bold"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
@@ -244,18 +214,14 @@ const MyPage = () => {
 							</motion.h1>
 							<Hr />
 							<motion.p
-								className="title  text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5"
+								className="title text-xl mt-4 tracking-wider text-gray-500 dark:text-gray-400 leading-[1.7rem] mb-5"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
 									delay: 0.2,
 									type: "spring",
 								}}>
-								This is some of my projects that I have done{" "}
-								<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
-									{" "}
-									and currently working on.
-								</span>
+								This is some of my projects that I have done and currently working on.
 							</motion.p>
 							<motion.div
 								initial={{ y: 40, opacity: 0 }}
@@ -269,41 +235,39 @@ const MyPage = () => {
 								</Button>
 							</motion.div>
 						</div>
-					</div>
-				</section>
-				<section id="contact" className="section">
-					<div className="relative md:h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
-						<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
+						<div className="flex justify-center items-center order-1 md:order-2">
 							<motion.div
-								className="bg-slate-300 rounded-2xl h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 overflow-hidden"
+								className="bg-slate-300 rounded-2xl h-[400px] md:h-[500px] w-full max-w-[400px] grayscale hover:grayscale-0 overflow-hidden relative"
 								initial={{
-									x: 300,
+									x: 100,
 									opacity: 0,
-									z: -100,
 								}}
 								whileInView={{
 									x: 0,
 									opacity: 1,
-									z: 0,
 								}}
 								transition={{
-									delay: 0.5,
+									delay: 0.3,
 									type: "spring",
 									stiffness: 100,
 									damping: 20,
 								}}>
 								<Image
-									src={Setup}
+									src={ProjectAll}
 									layout="fill"
 									className="object-cover rounded-2xl"
-									alt="Timi Olumcev Setup"
+									alt="Timi Olumcev Projects"
 									placeholder="blur"
 								/>
 							</motion.div>
 						</div>
-						<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 overflow-hidden">
+					</div>
+				</section>
+				<section id="contact" className="section">
+					<div className="w-screen min-h-screen grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-20 items-center">
+						<div className="flex flex-col justify-center items-start text-start order-2 md:order-1">
 							<motion.h1
-								className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold mb-3"
+								className="text-black dark:text-white text-5xl md:text-8xl font-bold mb-3"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
@@ -314,20 +278,17 @@ const MyPage = () => {
 							</motion.h1>
 							<Hr />
 							<motion.p
-								className="title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] md:mb-5"
+								className="title text-xl mt-4 tracking-wider text-gray-500 dark:text-gray-400 leading-[1.7rem] md:mb-5"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
 									delay: 0.2,
 									type: "spring",
 								}}>
-								Feel free to contact me if you have any{" "}
-								<span className="bg-transparent md:bg-gray-100 bg-opacity-50 xl:bg-transparent">
-									questions or just want to say hi.
-								</span>
+								Feel free to contact me if you have any questions or just want to say hi.
 							</motion.p>
 							<motion.p
-								className="title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5"
+								className="title text-xl mt-4 tracking-wider text-gray-500 dark:text-gray-400 leading-[1.7rem] mb-5"
 								initial={{ x: -100, opacity: 0 }}
 								whileInView={{ x: 0, opacity: 1 }}
 								transition={{
@@ -379,6 +340,32 @@ const MyPage = () => {
 									<FontAwesomeIcon icon={faLinkedin} className="text-3xl" />
 								</motion.a>
 							</div>
+						</div>
+						<div className="flex justify-center items-center order-1 md:order-2">
+							<motion.div
+								className="bg-slate-300 rounded-2xl h-[400px] md:h-[500px] w-full max-w-[400px] grayscale hover:grayscale-0 overflow-hidden relative"
+								initial={{
+									x: 100,
+									opacity: 0,
+								}}
+								whileInView={{
+									x: 0,
+									opacity: 1,
+								}}
+								transition={{
+									delay: 0.3,
+									type: "spring",
+									stiffness: 100,
+									damping: 20,
+								}}>
+								<Image
+									src={Setup}
+									layout="fill"
+									className="object-cover rounded-2xl"
+									alt="Timi Olumcev Setup"
+									placeholder="blur"
+								/>
+							</motion.div>
 						</div>
 					</div>
 				</section>

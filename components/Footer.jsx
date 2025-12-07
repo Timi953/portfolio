@@ -26,7 +26,7 @@ export default function Footer() {
 						Want something like this?
 					</motion.h2>
 					<motion.h1
-						className="text-5xl md:text-7xl font-medium mt-3  hover:underline whitespace-nowrap leading-none"
+						className="text-5xl md:text-7xl font-medium mt-3 hover:underline whitespace-nowrap leading-none dark:text-white"
 						initial={{
 							opacity: 0,
 							x: 100,
@@ -47,9 +47,9 @@ export default function Footer() {
 				</Link>
 			</div>
 			<footer className="flex justify-center items-center flex-col my-5 self-start]">
-				<p className="text-gray-800 text-sm">
+				<p className="text-gray-800 dark:text-gray-300 text-sm">
 					&copy;{new Date().getFullYear()} -{" "}
-					<span className="text-gray-700 text-lg">Timi Olumcev</span>
+					<span className="text-gray-700 dark:text-gray-200 text-lg">Timi Olumcev</span>
 				</p>
 			</footer>
 		</div>

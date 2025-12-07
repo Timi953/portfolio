@@ -74,7 +74,7 @@ function Title() {
 			<div className="flex justify-center items-center flex-col my-5 self-start">
 				<Hr variant="long"></Hr>
 				<motion.h1
-					className="text-3xl font-bold mt-3"
+					className="text-3xl font-bold mt-3 dark:text-white"
 					initial={{
 						opacity: 0,
 						x: -200,
@@ -140,23 +140,23 @@ function ExperienceCard({ experience, index, isEven }) {
 			{" "}
 			{/* Card */}
 			<div
-				className={`bg-white/20 backdrop-blur-sm border border-gray-300/30 rounded-2xl p-6 shadow-lg
-				hover:shadow-xl hover:bg-white/30 transition-all duration-300 ml-12 md:ml-0`}>
+				className={`bg-white/20 dark:bg-gray-800/30 backdrop-blur-sm border border-gray-300/30 dark:border-gray-600/30 rounded-2xl p-6 shadow-lg
+				hover:shadow-xl hover:bg-white/30 dark:hover:bg-gray-700/30 transition-all duration-300 ml-12 md:ml-0`}>
 				{/* Company & Position */}
 				<div className="mb-4">
-					<h3 className="font-bold text-xl text-black mb-1">
+					<h3 className="font-bold text-xl text-black dark:text-white mb-1">
 						{experience.company}
 					</h3>
-					<h4 className="font-medium text-lg text-gray-700">
+					<h4 className="font-medium text-lg text-gray-700 dark:text-gray-300">
 						{experience.position}
-						<span className="text-sm font-normal text-gray-500 ml-2">
+						<span className="text-sm font-normal text-gray-500 dark:text-gray-400 ml-2">
 							• {experience.type}
 						</span>
 					</h4>
 				</div>
 
 				{/* Description */}
-				<p className="text-gray-600 text-justify leading-relaxed mb-4">
+				<p className="text-gray-600 dark:text-gray-400 text-justify leading-relaxed mb-4">
 					{experience.description}
 				</p>
 
@@ -165,7 +165,7 @@ function ExperienceCard({ experience, index, isEven }) {
 					{experience.skills.map((skill, idx) => (
 						<span
 							key={idx}
-							className="bg-gray-200/60 hover:bg-gray-300/60 border border-gray-400/40 text-black px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
+							className="bg-gray-200/60 dark:bg-gray-700/60 hover:bg-gray-300/60 dark:hover:bg-gray-600/60 border border-gray-400/40 dark:border-gray-500/40 text-black dark:text-white px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
 							{skill}
 						</span>
 					))}
@@ -198,9 +198,9 @@ export default function Experience() {
 				<div className="relative w-full max-w-6xl mx-auto">
 					{" "}
 					{/* Timeline line - hidden on mobile, visible on md+ */}
-					<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-black via-gray-400 to-transparent h-full"></div>
+					<div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-black dark:from-white via-gray-400 to-transparent h-full"></div>
 					{/* Mobile timeline line */}
-					<div className="md:hidden absolute left-0 w-1 bg-gradient-to-b from-black via-gray-400 to-transparent h-full"></div>{" "}
+					<div className="md:hidden absolute left-0 w-1 bg-gradient-to-b from-black dark:from-white via-gray-400 to-transparent h-full"></div>{" "}
 					{/* Experience cards */}
 					<div className="space-y-12 md:space-y-16 relative">
 						<AnimatePresence>
@@ -215,7 +215,7 @@ export default function Experience() {
 
 									{/* Timeline dot - positioned at the start of the experience card */}
 									<div
-										className={`absolute w-6 h-6 bg-black rounded-full border-4 border-white shadow-lg z-30
+										className={`absolute w-6 h-6 bg-black dark:bg-white rounded-full border-4 border-white dark:border-gray-800 shadow-lg z-30
 										md:left-1/2 md:-translate-x-1/2 md:top-4
 										left-0 -translate-x-1/2 top-5`}
 									/>

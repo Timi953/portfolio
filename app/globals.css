@@ -5,6 +5,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
 	font-size: 17px !important;
 }
@@ -25,6 +27,18 @@ body {
 	font-family: 'Poppins', sans-serif !important;
 	color: black;
 	background-color: rgb(230, 230, 230);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark body {
+	color: rgb(230, 230, 230);
+	background-color: rgb(23, 23, 23);
+}
+
+.dark ::selection {
+	background: #e6e6e6;
+	color: #171717;
 }
 
 h1, h2, h3, h4, h5, h6 {

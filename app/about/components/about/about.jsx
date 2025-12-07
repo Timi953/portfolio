@@ -11,7 +11,7 @@ function Title() {
 		<div className="mt-10 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
 			<div className="flex justify-center items-center flex-col my-5 self-start ">
 				<Hr variant="long"></Hr>
-				<h1 className="text-3xl font-bold mt-3">Who Am I?</h1>
+				<h1 className="text-3xl font-bold mt-3 dark:text-white">Who Am I?</h1>
 			</div>
 		</div>
 	);
@@ -107,38 +107,38 @@ export default function About() {
 
 						type: "spring",
 					}}>
-					<h2 className="text-2xl font-bold tracking-wider mb-3">
+					<h2 className="text-2xl font-bold tracking-wider mb-3 dark:text-white">
 						Timi Olumcev
 					</h2>
-					<p className="text-gray-600 text-justify title text-lg">
+					<p className="text-gray-600 dark:text-gray-400 text-justify title text-lg">
 						Hey there, I&rsquo;m Timi Olumcev, a
-						<span className="text-black font-medium">
+						<span className="text-black dark:text-white font-medium">
 							{" "}
 							Full Stack AI Developer
 						</span>{" "}
 						from
-						<span className="text-black font-medium">
+						<span className="text-black dark:text-white font-medium">
 							{" "}
 							Skopje, North Macedonia.
 						</span>{" "}
 						I started my career ensuring software works flawlessly — now I build systems that think for themselves.
 						<br /><br />
 						With a strong foundation in
-						<span className="text-black font-medium">
+						<span className="text-black dark:text-white font-medium">
 							{" "}
 							automation and software reliability,
 						</span>{" "}
 						I transitioned into the AI space and never looked back. Today, I design and build SaaS and PaaS solutions powered by AI, helping clients solve unique problems with speed, scalability, and intelligence.
 						<br /><br />
 						I bring a
-						<span className="text-black font-medium">
+						<span className="text-black dark:text-white font-medium">
 							{" "}
 							&quot;nothing is impossible to build&quot;
 						</span>{" "}
 						mindset to every project — whether it&rsquo;s integrating LLMs into existing workflows, automating decision-making systems with N8n and Claude Code, or creating cloud-native applications on GCP and Amazon Bedrock that just work smarter.
 						<br /><br />
 						My approach?
-						<span className="text-black font-medium">
+						<span className="text-black dark:text-white font-medium">
 							{" "}
 							Build fast, but build right.
 						</span>{" "}

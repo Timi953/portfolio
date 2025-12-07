@@ -7,6 +7,7 @@ import "./nprogress.css";
 import { Analytics } from "@vercel/analytics/react";
 // import Chat from "@/components/Chat"; // Chat feature temporarily disabled
 import ClientTopProgressBar from "@/components/ClientTopProgressBar";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata = {
     title: "Timi Olumcev | Portfolio",
@@ -51,13 +52,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body>
-				<ClientTopProgressBar />
-				<Navbar />
-				{children}
-				{/* <Chat /> Chat feature temporarily disabled */}
-				<Analytics />
+				<ThemeProvider>
+					<ClientTopProgressBar />
+					<Navbar />
+					{children}
+					{/* <Chat /> Chat feature temporarily disabled */}
+					<Analytics />
+				</ThemeProvider>
 			</body>
 		</html>
 	);

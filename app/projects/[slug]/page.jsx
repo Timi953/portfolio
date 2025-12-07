@@ -105,7 +105,7 @@ function Page(props) {
 			<FixedButon href="/projects">
 				<FontAwesomeIcon
 					icon={faChevronLeft}
-					className="text-black pr-10"
+					className="text-black dark:text-white pr-10"
 				/>
 			</FixedButon>
 			<ScrollDownButton />
@@ -116,7 +116,7 @@ function Page(props) {
 							<h2 className="uppercase font-normal text-lg tracking-[8px] text-neutral-400">
 								Project
 							</h2>
-							<h1 className="text-4xl font-medium text-neutral-900">
+							<h1 className="text-4xl font-medium text-neutral-900 dark:text-neutral-100">
 								{data.title}
 							</h1>
 						</div>
@@ -124,7 +124,7 @@ function Page(props) {
 							<h2 className="uppercase font-normal text-lg tracking-[8px] text-neutral-400">
 								Technology
 							</h2>
-							<p className="text-2xl font-normal text-neutral-900">
+							<p className="text-2xl font-normal text-neutral-900 dark:text-neutral-100">
 								{data.tech.join(", ")}
 							</p>
 						</div>
@@ -132,7 +132,7 @@ function Page(props) {
 							<h2 className="uppercase font-normal text-lg tracking-[8px] text-neutral-400">
 								Year
 							</h2>
-							<p className="text-2xl font-normal text-neutral-900">
+							<p className="text-2xl font-normal text-neutral-900 dark:text-neutral-100">
 								{data.year}
 							</p>
 						</div>
@@ -142,11 +142,11 @@ function Page(props) {
 									Preview
 								</h2>
 								{data.preview === "unavailable" ? (
-									<p className="text-xl font-normal text-gray-500 italic">
+									<p className="text-xl font-normal text-gray-500 dark:text-gray-400 italic">
 										This project is no longer public
 									</p>
 								) : (
-									<p className="text-2xl font-normal text-neutral-900">
+									<p className="text-2xl font-normal text-neutral-900 dark:text-neutral-100">
 										<a
 											href={data.preview}
 											target="_blank"
@@ -166,7 +166,7 @@ function Page(props) {
 								<h2 className="uppercase font-normal text-lg tracking-[8px] text-neutral-400">
 									Source Code
 								</h2>
-								<p className="text-2xl font-normal text-neutral-900">
+								<p className="text-2xl font-normal text-neutral-900 dark:text-neutral-100">
 									<a
 										href={data.code}
 										target="_blank"
@@ -188,7 +188,7 @@ function Page(props) {
 						{data.desc.map((desc, index) => (
 							<p
 								key={index}
-								className="text-xl text-justify tracking-wide font-normal text-gray-500 mb-5">
+								className="text-xl text-justify tracking-wide font-normal text-gray-500 dark:text-gray-400 mb-5">
 								{desc}
 							</p>
 						))}

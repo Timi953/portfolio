@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const NavItems = ({ isNavOpen, setIsNavOpen }) => {
 	const [isMobile, setIsMobile] = useState(false);
@@ -197,22 +198,23 @@ const Navbar = () => {
 				} inset-0  bg-opacity-50 flex flex-row justify-between items-center h-16 z-50 `}>
 				<div>
 					<h1
-						className={`text-2xl ml-2 md:ml-0 transition-colors ease duration-500 ${
+						className={`text-2xl ml-2 md:ml-0 transition-colors ease duration-500 dark:text-white ${
 							isNavOpen ? "text-white" : ""
 						}`}>
 						Timi Olumcev
 					</h1>
 				</div>
-				<div className="flex flex-row items-center">
+				<div className="flex flex-row items-center gap-4">
+					<ThemeToggle />
 					<button
 						className="burger button flex flex-col justify-center items-center space-y-1.5 "
 						onClick={toggleNav}>
 						<div
-							className={`w-10 h-1 bg-black rounded-full transition-all ease duration-300 ${
+							className={`w-10 h-1 bg-black dark:bg-white rounded-full transition-all ease duration-300 ${
 								isNavOpen ? "rotate-45   bg-white translate-y-[2px]" : ""
 							}`}></div>
 						<div
-							className={`w-10 h-1 bg-black rounded-full transition-all ease duration-300 ${
+							className={`w-10 h-1 bg-black dark:bg-white rounded-full transition-all ease duration-300 ${
 								isNavOpen ? "-rotate-45 -translate-y-2 bg-white" : ""
 							}`}></div>
 					</button>

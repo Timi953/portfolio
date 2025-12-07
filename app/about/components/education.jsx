@@ -113,7 +113,7 @@ export default function Education() {
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}>
-					<h1 className="text-3xl md:text-4xl font-bold tracking-tighter">
+					<h1 className="text-3xl md:text-4xl font-bold tracking-tighter dark:text-white">
 						Education
 					</h1>
 					<p className="text-muted-foreground max-w-[800px] mx-auto">
@@ -128,9 +128,9 @@ export default function Education() {
 						initial={{ opacity: 0, x: -50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}>
-						<div className="font-medium text-lg mb-4">2011 - 2015</div>
+						<div className="font-medium text-lg mb-4 dark:text-white">2011 - 2015</div>
 						<div>
-							<h2 className="font-semibold text-xl">
+							<h2 className="font-semibold text-xl dark:text-white">
 								Universitatea OVIDIUS din Constanta
 							</h2>
 							<h3 className="text-md font-normal mb-3">
@@ -166,18 +166,18 @@ export default function Education() {
 								</div>
 							</div>
 							<div className="flex items-center gap-2">
-								<p className="text-gray-600 text-justify title text-lg">
+								<p className="text-gray-600 dark:text-gray-400 text-justify title text-lg">
 									My academic journey began in{" "}
-									<span className="text-black font-medium">
+									<span className="text-black dark:text-white font-medium">
 										medicine
 									</span>{" "}
 									at{" "}
-									<span className="text-black font-medium">
+									<span className="text-black dark:text-white font-medium">
 										Universitatea OVIDIUS din Constanta, Romania
 									</span>
 									. While my path eventually led me to technology and software development, the rigorous
 									training in medical sciences taught me{" "}
-									<span className="text-black font-medium">
+									<span className="text-black dark:text-white font-medium">
 										attention to detail, systematic thinking, and the importance of continuous learning
 									</span>
 									—skills that serve me exceptionally well in AI development and automation today.
@@ -185,7 +185,7 @@ export default function Education() {
 									<br />
 									Transitioning from medicine to technology wasn&rsquo;t just a career change—it was discovering where
 									I truly belonged. The analytical mindset from my medical education combined with my passion for{" "}
-									<span className="text-black font-medium">
+									<span className="text-black dark:text-white font-medium">
 										problem-solving and innovation
 									</span>{" "}
 									naturally led me to software development, where I could build systems that help people at scale.
@@ -193,14 +193,14 @@ export default function Education() {
 									<br />
 									Today, I bring that same dedication to precision and reliability from medicine into every line of code I write,
 									ensuring that the AI systems and automation solutions I build are not just functional, but{" "}
-									<span className="text-black font-medium">
+									<span className="text-black dark:text-white font-medium">
 										trustworthy and impactful
 									</span>
 									.
 								</p>
 							</div>
 							<div className="flex flex-wrap gap-2 mt-4 text-sm">
-								<div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
+								<div className="bg-gray-300 dark:bg-gray-700 text-black dark:text-white px-2 py-1 rounded-2xl">
 									Graduated: 2015
 								</div>
 							</div>
@@ -212,7 +212,7 @@ export default function Education() {
 						initial={{ opacity: 0, x: 50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}>
-						<h2 className="font-semibold text-xl mt-7">Certifications & Training</h2>
+						<h2 className="font-semibold text-xl mt-7 dark:text-white">Certifications & Training</h2>
 						<p className="text-md font-normal mb-3 md:mb-6">
 							Professional certifications and training programs completed.
 						</p>
@@ -245,7 +245,7 @@ export default function Education() {
 											) : null}
 
 											{/* Glassmorphism achievement card with monochrome to color effect */}
-											<div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-4 shadow-lg hover:bg-white/30 transition-all duration-300 hover:shadow-xl grayscale hover:grayscale-0">
+											<div className="bg-white/20 dark:bg-gray-800/30 backdrop-blur-md border border-white/30 dark:border-gray-600/30 rounded-2xl p-4 shadow-lg hover:bg-white/30 dark:hover:bg-gray-700/30 transition-all duration-300 hover:shadow-xl grayscale hover:grayscale-0">
 												<div className="flex items-center gap-4">
 													<div
 														className={`aspect-square w-10 rounded-full bg-gradient-to-r ${achievement.color} flex items-center justify-center text-primary-foreground transition-all duration-300`}>
@@ -255,8 +255,8 @@ export default function Education() {
 														/>
 													</div>
 													<div>
-														<h3 className="font-medium">{achievement.title}</h3>
-														<p className="text-sm">{achievement.subtitle}</p>
+														<h3 className="font-medium dark:text-white">{achievement.title}</h3>
+														<p className="text-sm dark:text-gray-300">{achievement.subtitle}</p>
 														<div className="text-xs text-gray-500 mt-1">
 															{achievement.date}
 														</div>
