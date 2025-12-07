@@ -2,126 +2,6 @@
   "Projects": [
     {
       "show": true,
-      "title": "AI Automation Platform",
-      "desc": [
-        "An advanced AI automation platform built with Python and LangChain, featuring agentic AI workflows and RAG capabilities. The platform integrates with Amazon Bedrock and GCP AI Platform to provide intelligent automation solutions.",
-        "The system implements sophisticated AI agents that can handle complex workflows, process natural language queries, and provide context-aware responses using retrieval-augmented generation (RAG) techniques.",
-        "Integrated with N8n for workflow automation, the platform offers seamless API integrations with services like Stripe, ElevenLabs, and Airtable."
-      ],
-      "year": "2025",
-      "preview": "",
-      "code": "",
-      "thumbnail": "/image/projects/placeholder-ai-automation.jpg",
-      "images": [
-        "/image/projects/placeholder-ai-automation-1.png",
-        "/image/projects/placeholder-ai-automation-2.png",
-        "/image/projects/placeholder-ai-automation-3.png"
-      ],
-      "tech": [
-        "Python",
-        "LangChain",
-        "Amazon Bedrock",
-        "GCP AI Platform",
-        "N8n",
-        "Supabase",
-        "Docker",
-        "OpenAI API",
-        "Anthropic Claude"
-      ],
-      "slug": "ai-automation-platform",
-      "category": [1, 2]
-    },
-    {
-      "show": true,
-      "title": "Cloud Infrastructure Manager",
-      "desc": [
-        "A comprehensive cloud infrastructure management solution built with .NET and C#, providing automated deployment and monitoring capabilities across Google Cloud Platform.",
-        "The application features real-time monitoring, automated scaling, and intelligent resource allocation using cloud-native technologies and best practices.",
-        "Includes integration with CI/CD pipelines, automated testing frameworks, and comprehensive logging and alerting systems."
-      ],
-      "year": "2025",
-      "preview": "",
-      "code": "",
-      "thumbnail": "/image/projects/placeholder-cloud-infra.jpg",
-      "images": [
-        "/image/projects/placeholder-cloud-infra-1.png",
-        "/image/projects/placeholder-cloud-infra-2.png"
-      ],
-      "tech": [
-        "C#",
-        ".NET",
-        "GCP",
-        "Docker",
-        "Kubernetes",
-        "GitHub Actions",
-        "Supabase",
-        "TypeScript"
-      ],
-      "slug": "cloud-infrastructure-manager",
-      "category": [1]
-    },
-    {
-      "show": true,
-      "title": "Test Automation Framework",
-      "desc": [
-        "An enterprise-grade test automation framework built with Selenium, Robot Framework, and SpecFlow for comprehensive end-to-end testing.",
-        "The framework supports multiple browsers, parallel execution, and generates detailed test reports with screenshots and videos for failed tests.",
-        "Integrated with Jenkins for continuous testing and includes custom test libraries for common testing scenarios, API testing capabilities with Postman collections, and database validation features."
-      ],
-      "year": "2024",
-      "preview": "",
-      "code": "",
-      "thumbnail": "/image/projects/placeholder-test-automation.jpg",
-      "images": [
-        "/image/projects/placeholder-test-automation-1.png",
-        "/image/projects/placeholder-test-automation-2.png",
-        "/image/projects/placeholder-test-automation-3.png"
-      ],
-      "tech": [
-        "Python",
-        "C#",
-        "Selenium",
-        "Robot Framework",
-        "SpecFlow",
-        "Jenkins",
-        "Postman",
-        "Visual Studio"
-      ],
-      "slug": "test-automation-framework",
-      "category": [2]
-    },
-    {
-      "show": true,
-      "title": "API Integration Hub",
-      "desc": [
-        "A centralized API integration hub that provides unified access to multiple third-party services including Stripe for payments, ElevenLabs for voice synthesis, and various data sources.",
-        "Built with modern API design principles, featuring GraphQL and REST endpoints, comprehensive API documentation with Swagger, and robust error handling and rate limiting.",
-        "The hub includes automated API testing, monitoring dashboards, and webhook management for real-time event processing."
-      ],
-      "year": "2024",
-      "preview": "",
-      "code": "",
-      "thumbnail": "/image/projects/placeholder-api-hub.jpg",
-      "images": [
-        "/image/projects/placeholder-api-hub-1.png",
-        "/image/projects/placeholder-api-hub-2.png"
-      ],
-      "tech": [
-        "Python",
-        "FastAPI",
-        "GraphQL",
-        "Stripe API",
-        "ElevenLabs",
-        "Postman",
-        "Swagger",
-        "N8n",
-        "Airtable"
-      ],
-      "slug": "api-integration-hub",
-      "category": [1, 2]
-    },
-    {
-      "show": true,
       "title": "TestNexus",
       "desc": [
         "TestNexus is a comprehensive unified testing framework designed to streamline all aspects of software quality assurance. Supporting UI, API, performance, contract, end-to-end, and integration testing, it provides a single platform for managing your entire test suite with an intuitive dark-themed interface.",
@@ -146,6 +26,32 @@
         "CI/CD"
       ],
       "slug": "testnexus",
+      "category": [1, 2]
+    },
+    {
+      "show": true,
+      "title": "RemodelSpark",
+      "desc": [
+        "RemodelSpark is an AI-powered real estate visualization platform that transforms property photos into stunning remodeling previews. Powered by NanoBanana's advanced image generation technology, it enables homeowners, real estate agents, and designers to instantly visualize renovation possibilities.",
+        "The platform offers three distinct remodeling categories: Interior Design for reimagining living spaces, Facade transformation for exterior makeovers, and Landscaping for outdoor beautification. Users simply upload a photo, select their preferred style and remodeling type, and watch as AI generates photorealistic previews of the transformed space.",
+        "With an intuitive interface and rapid generation capabilities, RemodelSpark bridges the gap between imagination and visualization, helping users make informed decisions about property improvements before committing to costly renovations."
+      ],
+      "year": "2025",
+      "preview": "https://remodelspark.com",
+      "code": "",
+      "thumbnail": "/image/projects/web/remodelspark/remodelspark-thumbnail.png",
+      "images": [
+        "/image/projects/web/remodelspark/remodelspark-1.png"
+      ],
+      "tech": [
+        "AI Image Generation",
+        "NanoBanana",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Cloud Infrastructure"
+      ],
+      "slug": "remodelspark",
       "category": [1, 2]
     }
   ]
