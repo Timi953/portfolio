@@ -119,6 +119,34 @@
       ],
       "slug": "api-integration-hub",
       "category": [1, 2]
+    },
+    {
+      "show": true,
+      "title": "TestNexus",
+      "desc": [
+        "TestNexus is a comprehensive unified testing framework designed to streamline all aspects of software quality assurance. Supporting UI, API, performance, contract, end-to-end, and integration testing, it provides a single platform for managing your entire test suite with an intuitive dark-themed interface.",
+        "Built with containerization at its core, TestNexus spins up isolated Docker containers for each test run, ensuring clean and reproducible test environments. After execution, it automatically exports detailed reports and terminates containers to optimize resource usage - no orphaned processes or wasted compute.",
+        "The framework features real-time console output, organized test suite management, and comprehensive reporting with archived results. Whether you're running a quick API validation or a full regression suite, TestNexus handles the infrastructure so you can focus on writing better tests."
+      ],
+      "year": "2025",
+      "preview": "",
+      "code": "https://github.com/Timi953/unified-testing-framework.git",
+      "thumbnail": "/image/projects/web/testnexus/testnexus-thumbnail.png",
+      "images": [
+        "/image/projects/web/testnexus/testnexus-1.png"
+      ],
+      "tech": [
+        "Docker",
+        "Python",
+        "Pytest",
+        "Selenium",
+        "Playwright",
+        "k6",
+        "API Testing",
+        "CI/CD"
+      ],
+      "slug": "testnexus",
+      "category": [1, 2]
     }
   ]
 }

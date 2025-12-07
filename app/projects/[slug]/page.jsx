@@ -197,7 +197,7 @@ function Page(props) {
 							key={index}
 							src={image}
 							alt={`Project Image ${index + 1}`}
-							className="mb-5 h-auto max-h-screen max-w-7xl mx-auto"
+							className="mb-5 h-auto max-h-screen max-w-7xl mx-auto grayscale hover:grayscale-0 transition-all duration-300"
 							width={1920}
 							height={1080}
 							blurDataURL={BlurImage.src}
