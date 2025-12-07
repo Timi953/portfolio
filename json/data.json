@@ -2,6 +2,32 @@
   "Projects": [
     {
       "show": true,
+      "title": "AI Website Builder",
+      "desc": [
+        "An intelligent website generator that creates personalized websites based on user input. Users provide their name, email, occupation, location, and select a design theme to get started.",
+        "The system leverages Perplexity AI to research the person and OpenAI to generate relevant, tailored content. Custom MCP building blocks power the modular website generation pipeline.",
+        "Features a live preview panel that displays the generated website in real-time with professional themes including Elegant, Modern, and Creative styles."
+      ],
+      "year": "2025",
+      "preview": "unavailable",
+      "code": "",
+      "thumbnail": "/image/projects/web/website-builder/website-builder-thumbnail.png",
+      "images": [
+        "/image/projects/web/website-builder/website-builder-1.png"
+      ],
+      "tech": [
+        "Next.js",
+        "React",
+        "OpenAI",
+        "Perplexity AI",
+        "Tailwind CSS",
+        "MCP"
+      ],
+      "slug": "website-builder",
+      "category": [1, 2]
+    },
+    {
+      "show": true,
       "title": "TestNexus",
       "desc": [
         "TestNexus is a comprehensive unified testing framework designed to streamline all aspects of software quality assurance. Supporting UI, API, performance, contract, end-to-end, and integration testing, it provides a single platform for managing your entire test suite with an intuitive dark-themed interface.",

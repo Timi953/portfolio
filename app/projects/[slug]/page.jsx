@@ -141,18 +141,24 @@ function Page(props) {
 								<h2 className="uppercase font-normal text-lg tracking-[8px] text-neutral-400">
 									Preview
 								</h2>
-								<p className="text-2xl font-normal text-neutral-900">
-									<a
-										href={data.preview}
-										target="_blank"
-										rel="noopener noreferrer">
-										Preview{" "}
-										<FontAwesomeIcon
-											icon={faArrowUpRightFromSquare}
-											className="ml-3"
-										/>
-									</a>
-								</p>
+								{data.preview === "unavailable" ? (
+									<p className="text-xl font-normal text-gray-500 italic">
+										This project is no longer public
+									</p>
+								) : (
+									<p className="text-2xl font-normal text-neutral-900">
+										<a
+											href={data.preview}
+											target="_blank"
+											rel="noopener noreferrer">
+											Preview{" "}
+											<FontAwesomeIcon
+												icon={faArrowUpRightFromSquare}
+												className="ml-3"
+											/>
+										</a>
+									</p>
+								)}
 							</div>
 						)}
 						{data.code && (

@@ -21,7 +21,7 @@ const experiences = [
 		startDate: "Dec 2021",
 		endDate: "Present",
 		company: "RLDatix & Allocate Macedonia",
-		position: "Automation Developer",
+		position: "QA Automation Developer",
 		type: "Full-time",
 		location: "Skopje, North Macedonia",
 		description:
@@ -33,7 +33,7 @@ const experiences = [
 		startDate: "Sep 2021",
 		endDate: "Dec 2021",
 		company: "Causeway Connect",
-		position: "Software Developer",
+		position: "QA Engineer",
 		type: "Full-time",
 		location: "Skopje, North Macedonia",
 		description:
@@ -45,7 +45,7 @@ const experiences = [
 		startDate: "Sep 2021",
 		endDate: "Dec 2021",
 		company: "CRMT Digital",
-		position: "Software Developer",
+		position: "QA Engineer",
 		type: "Full-time",
 		location: "Skopje, North Macedonia",
 		description:
@@ -57,7 +57,7 @@ const experiences = [
 		startDate: "Dec 2020",
 		endDate: "Dec 2021",
 		company: "dimITrycode",
-		position: "Junior Developer",
+		position: "QA Manual Software Tester",
 		type: "Contract",
 		location: "Gevgelija, North Macedonia",
 		description:
