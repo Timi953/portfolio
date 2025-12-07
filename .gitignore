@@ -36,3 +36,18 @@ next-env.d.ts
 
 .env
 .env.local
+
+# MCP and Claude Code configuration (may contain secrets)
+.mcp.json
+.claude/settings.local.json
+.claude/agents/
+
+# Deployment configurations (environment-specific)
+ecosystem.config.js
+nginx-configs/
+
+# Testing artifacts
+.playwright-mcp/
+
+# Infrastructure documentation with sensitive data
+nginx implementation plan.md
