@@ -1,7 +1,3 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-	enabled: process.env.ANALYZE === "true",
-});
-
 const nextConfig = {
 	images: {
 		remotePatterns: [
@@ -59,7 +55,12 @@ const nextConfig = {
 };
 
 // Only wrap with bundle analyzer when analyzing builds
-// This prevents webpack warning when using Turbopack in development
-module.exports = process.env.ANALYZE === "true"
-	? withBundleAnalyzer(nextConfig)
-	: nextConfig;
+// This prevents the require from failing in production where @next/bundle-analyzer isn't installed
+if (process.env.ANALYZE === "true") {
+	const withBundleAnalyzer = require("@next/bundle-analyzer")({
+		enabled: true,
+	});
+	module.exports = withBundleAnalyzer(nextConfig);
+} else {
+	module.exports = nextConfig;
+}
