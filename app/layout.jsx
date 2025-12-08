@@ -10,13 +10,14 @@ import ClientTopProgressBar from "@/components/ClientTopProgressBar";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata = {
+    metadataBase: new URL("https://olumchev.com"),
     title: "Timi Olumcev | Portfolio",
 
     description:
 		"I'm Timi Olumcev, a Full Stack AI Developer from Skopje, North Macedonia. I specialize in AI-powered SaaS/PaaS solutions, LLM integrations, and automation.",
 
     author: "Timi Olumcev",
-    siteUrl: "http://localhost:3000",
+    siteUrl: "https://olumchev.com",
     applicationName: "Timi Olumcev",
 
     keywords: [
@@ -34,7 +35,7 @@ export const metadata = {
 
     openGraph: {
 		type: "website",
-		url: "http://localhost:3000",
+		url: "https://olumchev.com",
 		title: "Timi Olumcev | Portfolio",
 		site_name: "Timi Olumcev | Portfolio",
 		description: "I'm Timi Olumcev, a Full Stack AI Developer specializing in AI-powered solutions and intelligent automation.",
