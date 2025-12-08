@@ -61,3 +61,4 @@ This is a Next.js 15 portfolio website using the App Router with React 19.
 Automated CI/CD via GitHub Actions deploys to VPS on push to master/main.
 - Build job: installs deps, lints, builds Next.js, creates artifact
 - Deploy job: SSHs to VPS, extracts artifact, restarts PM2
+- Health check ensures app responds before completing
