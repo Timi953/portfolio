@@ -55,3 +55,7 @@ This is a Next.js 15 portfolio website using the App Router with React 19.
 - Tailwind CSS v4 with PostCSS
 - Dark mode via `dark:` variant classes
 - Global styles in `app/globals.css`
+
+## Deployment
+
+Automated CI/CD via GitHub Actions deploys to VPS on push to master/main.
