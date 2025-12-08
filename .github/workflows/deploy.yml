@@ -167,8 +167,11 @@ jobs:
           ln -sfn "${RELEASE_PATH}" "${DEPLOY_PATH}/current_new"
           mv -Tf "${DEPLOY_PATH}/current_new" "${DEPLOY_PATH}/current"
 
-          echo "Reloading PM2 application..."
-          pm2 reload ${PM2_APP_NAME} --update-env || pm2 start npm --name ${PM2_APP_NAME} -- start -- -p 3002
+          echo "Restarting PM2 application..."
+          cd "${DEPLOY_PATH}/current"
+          pm2 delete ${PM2_APP_NAME} 2>/dev/null || true
+          PORT=3002 pm2 start "npx next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
+          pm2 save
 
           echo "Waiting for application to be ready..."
           sleep 5
@@ -183,7 +186,10 @@ jobs:
             if [ -n "$PREV_RELEASE" ] && [ "$PREV_RELEASE" != "$RELEASE_ID" ]; then
               ln -sfn "${DEPLOY_PATH}/releases/${PREV_RELEASE}" "${DEPLOY_PATH}/current_new"
               mv -Tf "${DEPLOY_PATH}/current_new" "${DEPLOY_PATH}/current"
-              pm2 reload ${PM2_APP_NAME} --update-env
+              pm2 delete ${PM2_APP_NAME} 2>/dev/null || true
+              cd "${DEPLOY_PATH}/current"
+              PORT=3002 pm2 start "npx next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
+              pm2 save
               echo "Rolled back to: ${PREV_RELEASE}"
             fi
             exit 1
