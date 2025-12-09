@@ -161,7 +161,7 @@ jobs:
           rm deployment.tar.gz
 
           echo "Installing production dependencies..."
-          pnpm install --prod --frozen-lockfile
+          CI=true pnpm install --prod --frozen-lockfile
 
           echo "Swapping symlink to new release..."
           ln -sfn "${RELEASE_PATH}" "${DEPLOY_PATH}/current_new"
