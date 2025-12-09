@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import FixedButton from "@/components/FixedButton";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +13,7 @@ import Experience from "./components/experience.jsx";
 import Education from "./components/education.jsx";
 
 // images
-import Hero from "@/public/image/me2.jpg";
+import Hero from "@/public/image/me2.webp";
 
 import Hr from "@/components/Hr";
 import About from "./components/about/about.jsx";
@@ -44,8 +44,9 @@ export default function Page() {
 							<Image
 								src={Hero}
 								alt="Alvalen Shafel"
-								layout="fill"
-								objectFit="cover"
+								fill
+								sizes="(max-width: 768px) 100vw, 50vw"
+								className="object-cover"
 								placeholder="blur"
 							/>
 						</motion.div>

@@ -207,8 +207,7 @@ function Page(props) {
 							width={1920}
 							height={1080}
 							blurDataURL={BlurImage.src}
-							layout="responsive"
-							objectFit="contain"
+							style={{ objectFit: 'contain' }}
 						/>
 					))}
 				</div>

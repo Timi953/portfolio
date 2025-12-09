@@ -9,10 +9,10 @@ This is Timi Olumcev's professional portfolio website built with Next.js, featur
 ## Features
 
 * **Smooth Animation:** Smooth page scroll and scroll trigger animation.
-* **Smooth Page Transition:** Smooth page transition with prefetching feature of next js.
-* **Dynamic Data:** Read the project data from JSON file instead of directly implemented the data.
-* **Intelliticks chat widget:** Chat with owner of the web realtime.
-* **Spotify realtime widget:** Show what song youre playing in this web.
+* **Smooth Page Transition:** Smooth page transition with prefetching feature of Next.js.
+* **Dynamic Data:** Read the project data from JSON file instead of directly implemented data.
+* **Optimized Images:** All images converted to WebP format for fast loading (78% size reduction).
+* **Dark/Light Mode:** Theme toggle with localStorage persistence.
 
 ## Installation
 
@@ -33,41 +33,14 @@ This is Timi Olumcev's professional portfolio website built with Next.js, featur
    ```
 4. Install dependencies:
 
-   ```
+   ```shell
    pnpm install
    ```
-5. Start the development server
+5. Start the development server:
 
    ```shell
-   pnpm next dev
+   pnpm dev
    ```
-6. Update the Intelliticks chat widget script in components/Chat.jsx, with your own
-
-   ```javascript
-    "use client"
-    import { useEffect } from "react";
-
-    // Component for Intelliticks chat widget
-    const Chat = () => {
-    	useEffect(() => {
-    		// Replace the Intelliticks script here
-
-    	}, []);
-
-    	return null;
-    };
-
-    export default Chat;
-   ```
-7. Set env.local by copying env.example and fill the variable
-
-   ```
-   NEXT_PUBLIC_SPOTIFY_CLIENT_ID=
-   NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET=
-   NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN=
-   ```
-
-   for further reference on how to setup spotify api you can check this [link ](https://leerob.io/blog/spotify-api-nextjs "leerob blog")
 
 ## Usage
 
@@ -91,14 +64,10 @@ The contact page allows users to get in touch with you. You can provide contact 
 
 ### Subpages
 
-- **Project archive:** list all of your project that dont needed to display at main project page.
-- Project details: See the main project detail by clicking the project image.
+- **Project archive:** List all of your projects that don't need to display on the main project page.
+- **Project details:** See the main project detail by clicking the project image.
 
 Feel free to customize and expand upon these sections and subpages to suit your needs and showcase your unique skills and projects.
-
-### Intelliticks chat widget
-
-Enjoy chat realtime with ease using Intelliticks (https://app.intelliticks.com/)
 
 ## Contributing
 

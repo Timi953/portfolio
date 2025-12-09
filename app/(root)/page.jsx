@@ -3,7 +3,7 @@
 // Licensed under the GNU GPL v3.0. See LICENSE for details.
 
 "use client";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -14,10 +14,10 @@ import { FullpageProvider } from "@/context/FullpageContext";
 // components
 import Button from "@/components/Button";
 import Sidebar from "@/components/Sidebar";
-import Me from "@/public/image/me.jpg";
-import MeAbout from "@/public/image/timi-about-main.jpg";
-import Setup from "@/public/image/contact-desk.jpg";
-import ProjectAll from "@/public/image/projects.png";
+import Me from "@/public/image/me.webp";
+import MeAbout from "@/public/image/timi-about-main.webp";
+import Setup from "@/public/image/contact-desk.webp";
+import ProjectAll from "@/public/image/projects.webp";
 import Hr from "@/components/Hr";
 
 // icons
@@ -55,6 +55,7 @@ const MyPage = () => {
 										className="rounded-full w-full h-full object-cover "
 										alt="Timi Olumcev"
 										placeholder="blur"
+										priority
 									/>
 								</div>
 							</div>
@@ -130,6 +131,7 @@ const MyPage = () => {
 									placeholder="blur"
 									alt="Timi Olumcev"
 									className="rounded-full w-full h-full object-cover"
+									priority
 								/>
 							</div>
 						</motion.div>
@@ -190,7 +192,8 @@ const MyPage = () => {
 								}}>
 								<Image
 									src={MeAbout}
-									layout="fill"
+									fill
+									sizes="(max-width: 768px) 100vw, 400px"
 									className="object-cover rounded-2xl"
 									alt="Timi Olumcev"
 									placeholder="blur"
@@ -254,7 +257,8 @@ const MyPage = () => {
 								}}>
 								<Image
 									src={ProjectAll}
-									layout="fill"
+									fill
+									sizes="(max-width: 768px) 100vw, 400px"
 									className="object-cover rounded-2xl"
 									alt="Timi Olumcev Projects"
 									placeholder="blur"
@@ -360,7 +364,8 @@ const MyPage = () => {
 								}}>
 								<Image
 									src={Setup}
-									layout="fill"
+									fill
+									sizes="(max-width: 768px) 100vw, 400px"
 									className="object-cover rounded-2xl"
 									alt="Timi Olumcev Setup"
 									placeholder="blur"

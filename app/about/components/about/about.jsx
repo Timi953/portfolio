@@ -1,9 +1,9 @@
 import Image from "next/image";
 // import Card from "./spotify/card"; // Spotify integration removed
 import { motion } from "framer-motion";
-import Me1 from "@/public/image/timi-about-main.jpg";
-import Me2 from "@/public/image/timi-about-deskIT.jpg";
-import Me3 from "@/public/image/timi-about-plant.jpg";
+import Me1 from "@/public/image/timi-about-main.webp";
+import Me2 from "@/public/image/timi-about-deskIT.webp";
+import Me3 from "@/public/image/timi-about-plant.webp";
 import Hr from "@/components/Hr";
 
 function Title() {
@@ -36,8 +36,9 @@ export default function About() {
 								<Image
 									src={Me1}
 									alt="Timi Olumcev"
-									layout="fill"
-									objectFit="cover"
+									fill
+									sizes="(max-width: 768px) 100vw, 33vw"
+									className="object-cover"
 									placeholder="blur"
 								/>
 							</motion.div>
@@ -59,8 +60,9 @@ export default function About() {
 								<Image
 									src={Me2}
 									alt="Timi Olumcev"
-									layout="fill"
-									objectFit="cover"
+									fill
+									sizes="(max-width: 768px) 100vw, 33vw"
+									className="object-cover"
 									placeholder="blur"
 								/>
 							</motion.div>
@@ -84,8 +86,9 @@ export default function About() {
 								<Image
 									src={Me3}
 									alt="Timi Olumcev"
-									layout="fill"
-									objectFit="cover"
+									fill
+									sizes="(max-width: 768px) 100vw, 33vw"
+									className="object-cover"
 									placeholder="blur"
 								/>
 							</motion.div>

@@ -11,9 +11,9 @@
       "year": "2025",
       "preview": "unavailable",
       "code": "",
-      "thumbnail": "/image/projects/web/website-builder/website-builder-thumbnail.png",
+      "thumbnail": "/image/projects/web/website-builder/website-builder-thumbnail.webp",
       "images": [
-        "/image/projects/web/website-builder/website-builder-1.png"
+        "/image/projects/web/website-builder/website-builder-1.webp"
       ],
       "tech": [
         "Next.js",
@@ -37,9 +37,9 @@
       "year": "2025",
       "preview": "",
       "code": "https://github.com/Timi953/unified-testing-framework.git",
-      "thumbnail": "/image/projects/web/testnexus/testnexus-thumbnail.png",
+      "thumbnail": "/image/projects/web/testnexus/testnexus-thumbnail.webp",
       "images": [
-        "/image/projects/web/testnexus/testnexus-1.png"
+        "/image/projects/web/testnexus/testnexus-1.webp"
       ],
       "tech": [
         "Docker",
@@ -65,9 +65,9 @@
       "year": "2025",
       "preview": "https://remodelspark.com",
       "code": "",
-      "thumbnail": "/image/projects/web/remodelspark/remodelspark-thumbnail.png",
+      "thumbnail": "/image/projects/web/remodelspark/remodelspark-thumbnail.webp",
       "images": [
-        "/image/projects/web/remodelspark/remodelspark-1.png"
+        "/image/projects/web/remodelspark/remodelspark-1.webp"
       ],
       "tech": [
         "AI Image Generation",

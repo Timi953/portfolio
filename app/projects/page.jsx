@@ -6,10 +6,10 @@ import Button from "@/components/Button";
 import Image from "next/image";
 
 // images
-import SmartShelf1 from "@/public/image/projects/web/smartshelf/smartshelf-1.png";
-import SmartShelf2 from "@/public/image/projects/web/smartshelf/smartshelf-2.png";
-import SmartShelf3 from "@/public/image/projects/web/smartshelf/smartshelf-3.png";
-import ProjectAll from "@/public/image/projects.png";
+import SmartShelf1 from "@/public/image/projects/web/smartshelf/smartshelf-1.webp";
+import SmartShelf2 from "@/public/image/projects/web/smartshelf/smartshelf-2.webp";
+import SmartShelf3 from "@/public/image/projects/web/smartshelf/smartshelf-3.webp";
+import ProjectAll from "@/public/image/projects.webp";
 
 import Hr from "@/components/Hr";
 import ProjectCard from "./components/ProjectCard";
@@ -69,10 +69,10 @@ export default function Page() {
 							<Image
 								src={ProjectAll}
 								alt="Projects"
-								layout="fill"
-								objectFit="cover"
+								fill
+								sizes="(max-width: 768px) 100vw, 50vw"
 								placeholder="blur"
-								className="rounded-2xl"
+								className="rounded-2xl object-cover"
 							/>
 						</motion.div>
 					</div>
@@ -98,10 +98,10 @@ export default function Page() {
 									<Image
 										src={SmartShelf1}
 										alt="SmartShelf"
-										layout="fill"
-										objectFit="cover"
+										fill
+										sizes="(max-width: 768px) 100vw, 50vw"
 										placeholder="blur"
-										className="rat"
+										className="rat object-cover"
 									/>
 								</motion.div>
 							</div>
@@ -122,10 +122,11 @@ export default function Page() {
 									<Image
 										src={SmartShelf2}
 										alt="SmartShelf"
-										layout="fill"
-										objectFit="cover"
+										fill
+										sizes="(max-width: 768px) 100vw, 50vw"
 										placeholder="blur"
-										objectPosition="0% 0%"
+										style={{ objectPosition: '0% 0%' }}
+										className="object-cover"
 									/>
 								</motion.div>
 							</div>
@@ -148,9 +149,10 @@ export default function Page() {
 									<Image
 										src={SmartShelf3}
 										alt="SmartShelf"
-										layout="fill"
-										objectFit="cover"
+										fill
+										sizes="(max-width: 768px) 100vw, 50vw"
 										placeholder="blur"
+										className="object-cover"
 									/>
 								</motion.div>
 							</div>

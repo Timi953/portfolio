@@ -4,7 +4,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import "./nprogress.css";
-import { Analytics } from "@vercel/analytics/react";
 // import Chat from "@/components/Chat"; // Chat feature temporarily disabled
 import ClientTopProgressBar from "@/components/ClientTopProgressBar";
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -60,7 +59,6 @@ export default function RootLayout({ children }) {
 					<Navbar />
 					{children}
 					{/* <Chat /> Chat feature temporarily disabled */}
-					<Analytics />
 				</ThemeProvider>
 			</body>
 		</html>

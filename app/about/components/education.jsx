@@ -10,9 +10,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import EduHats from "@/public/image/edu-hats.jpg";
-import EduDiploma from "@/public/image/edu-diploma.jpg";
-import EduUniversity from "@/public/image/edu-university.jpg";
+import EduHats from "@/public/image/edu-hats.webp";
+import EduDiploma from "@/public/image/edu-diploma.webp";
+import EduUniversity from "@/public/image/edu-university.webp";
 
 function Wrapper({ children }) {
 	return (
