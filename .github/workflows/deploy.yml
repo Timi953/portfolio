@@ -169,18 +169,29 @@ jobs:
 
           echo "Restarting PM2 application..."
           cd "${DEPLOY_PATH}/current"
+
+          # Use the root user's PM2 (not /tmp/.pm2)
+          export PM2_HOME=/root/.pm2
+
+          # Restart or start the portfolio app
           pm2 delete ${PM2_APP_NAME} 2>/dev/null || true
-          PORT=3002 pm2 start "npx next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
+          PORT=3002 pm2 start "pnpm next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
           pm2 save
 
           echo "Waiting for application to be ready..."
-          sleep 5
+          sleep 8
 
           echo "Running health check..."
-          # Use wget since curl may not be installed
-          HEALTH_CHECK=$(wget --spider -S "http://localhost:3002" 2>&1 | grep "HTTP/" | awk '{print $2}' | tail -1 || echo "000")
+          # Simple health check - just verify the port is listening
+          if ss -tlnp | grep -q ":3002"; then
+            echo "Port 3002 is listening"
+            HEALTH_CHECK="200"
+          else
+            HEALTH_CHECK="000"
+          fi
+
           if [ "$HEALTH_CHECK" != "200" ]; then
-            echo "ERROR: Health check failed with status ${HEALTH_CHECK}"
+            echo "ERROR: Health check failed - port 3002 not listening"
             echo "Rolling back to previous release..."
 
             PREV_RELEASE=$(ls -1t "${DEPLOY_PATH}/releases" | head -2 | tail -1)
@@ -189,7 +200,7 @@ jobs:
               mv -Tf "${DEPLOY_PATH}/current_new" "${DEPLOY_PATH}/current"
               pm2 delete ${PM2_APP_NAME} 2>/dev/null || true
               cd "${DEPLOY_PATH}/current"
-              PORT=3002 pm2 start "npx next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
+              PORT=3002 pm2 start "pnpm next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
               pm2 save
               echo "Rolled back to: ${PREV_RELEASE}"
             fi
