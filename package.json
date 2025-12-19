@@ -14,7 +14,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-sitemap": "node generate-sitemap.js"
+    "generate-sitemap": "node generate-sitemap.js",
+    "generate-cv": "node scripts/generate-cv.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -41,9 +42,13 @@
     "@next/bundle-analyzer": "15.2.8",
     "@types/react": "19.1.5",
     "canvas": "^3.2.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "puppeteer": "^24.34.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["canvas"]
+    "onlyBuiltDependencies": [
+      "canvas",
+      "puppeteer"
+    ]
   }
 }

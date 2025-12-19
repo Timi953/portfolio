@@ -50,9 +50,9 @@ Building AI-powered automation systems, integrating LLMs into business workflows
 
 ---
 
-### Automation Developer
-**RLDatix & Allocate Macedonia** · Full-time  
-*Dec 2021 - Present · 4 years 1 month*  
+### QA Automation Developer
+**RLDatix & Allocate Macedonia** · Full-time
+*Dec 2021 - Present · 4 years 1 month*
 Skopje, North Macedonia
 
 Developed robust automation frameworks and pipelines, ensuring software reliability at scale. Built comprehensive automation suites using modern frameworks and CI/CD practices.
@@ -61,9 +61,9 @@ Developed robust automation frameworks and pipelines, ensuring software reliabil
 
 ---
 
-### Software Developer
-**Causeway Connect** · Full-time  
-*Sep 2021 - Dec 2021 · 4 months*  
+### QA Engineer
+**Causeway Connect** · Full-time
+*Sep 2021 - Dec 2021 · 4 months*
 Skopje, North Macedonia
 
 Developed automation solutions using C#/.NET stack with behavior-driven development practices.
@@ -72,9 +72,9 @@ Developed automation solutions using C#/.NET stack with behavior-driven developm
 
 ---
 
-### Software Developer
-**CRMT Digital** · Full-time  
-*Sep 2021 - Dec 2021 · 4 months*  
+### QA Engineer
+**CRMT Digital** · Full-time
+*Sep 2021 - Dec 2021 · 4 months*
 Skopje, North Macedonia
 
 Built automation frameworks and contributed to software development initiatives using modern methodologies.
@@ -83,14 +83,14 @@ Built automation frameworks and contributed to software development initiatives 
 
 ---
 
-### Junior Developer
-**dimITrycode** · Contract  
-*Dec 2020 - Dec 2021 · 1 year 1 month*  
+### QA Manual Software Tester
+**dimITrycode** · Contract
+*Dec 2020 - Dec 2021 · 1 year 1 month*
 Gevgelija, North Macedonia
 
-Started my development journey focusing on software lifecycle understanding and test-driven development practices.
+Started my QA career focusing on software lifecycle understanding and manual testing practices.
 
-**Key Technologies:** SDLC, Test Driven Development, Agile Methodologies
+**Key Technologies:** SDLC, Manual Testing, Test Case Design, Agile Methodologies
 
 ---
 

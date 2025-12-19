@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timi Olumcev - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 9pt;
+            line-height: 1.4;
+            color: #1a1a1a;
+            background: white;
+            padding: 30px 40px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .profile-photo {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name-title h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 28pt;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
+
+        .name-title .subtitle {
+            font-size: 10pt;
+            color: #444;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 9pt;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .section {
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-size: 8pt;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+        }
+
+        .about-text {
+            font-size: 9pt;
+            line-height: 1.45;
+            color: #333;
+        }
+
+        .experience-item {
+            margin-bottom: 12px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .job-title {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .date-range {
+            font-size: 9pt;
+            color: #666;
+        }
+
+        .company {
+            font-size: 8.5pt;
+            color: #555;
+            margin-bottom: 3px;
+        }
+
+        .job-description {
+            font-size: 8.5pt;
+            color: #444;
+            line-height: 1.4;
+            margin-bottom: 3px;
+        }
+
+        .tech-stack {
+            font-size: 7.5pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 25px;
+        }
+
+        .skill-category h4 {
+            font-size: 8.5pt;
+            font-weight: 600;
+            margin-bottom: 2px;
+            color: #1a1a1a;
+        }
+
+        .skill-category p {
+            font-size: 8pt;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin-top: 14px;
+        }
+
+        .education-title {
+            font-size: 9pt;
+            font-weight: 600;
+        }
+
+        .education-school {
+            font-size: 8pt;
+            color: #555;
+            margin-top: 2px;
+        }
+
+        .education-date {
+            font-size: 8pt;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .languages-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .language-item {
+            font-size: 8.5pt;
+        }
+
+        .language-name {
+            font-weight: 500;
+        }
+
+        .language-level {
+            color: #666;
+        }
+
+        .certifications-list {
+            font-size: 8.5pt;
+            color: #444;
+        }
+
+        .certifications-list p {
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <img src="../public/image/me.webp" alt="Timi Olumcev" class="profile-photo">
+            <div class="name-title">
+                <h1>Timi Olumcev</h1>
+                <p class="subtitle">Full Stack AI Developer</p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <div>Skopje, North Macedonia</div>
+            <div>timiolumchev.com</div>
+            <div>github.com/Timi953</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">About</h2>
+        <p class="about-text">
+            I started my career ensuring software works flawlessly — now I build systems that think for themselves.
+            With a strong foundation in automation and software reliability, I transitioned into AI, designing SaaS and PaaS solutions
+            that help clients solve unique problems with speed, scalability, and intelligence. I bring a "nothing is impossible to build"
+            mindset — integrating LLMs into workflows, automating decision-making, and creating cloud-native applications that work smarter.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="job-title">AI Automation Developer</span>
+                <span class="date-range">Jun 2025 - Present</span>
+            </div>
+            <div class="company">Weber Media® Consulting GmbH · Contract · Remote</div>
+            <p class="job-description">Building AI-powered automation systems, integrating LLMs into business workflows, and developing intelligent cloud-native applications.</p>
+            <p class="tech-stack">N8n, Claude Code, Supabase, Lovable AI, MCP, Stripe, ElevenLabs, Veo3, Airtable, GCP, Amazon Bedrock, Docker, RAG</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="job-title">QA Automation Developer</span>
+                <span class="date-range">Dec 2021 - Present</span>
+            </div>
+            <div class="company">RLDatix & Allocate Macedonia · Full-time · Skopje</div>
+            <p class="job-description">Developed robust automation frameworks and pipelines, ensuring software reliability at scale with modern frameworks and CI/CD practices.</p>
+            <p class="tech-stack">Python, Robot Framework, Selenium WebDriver, Jenkins, GoCD, GitHub, CI/CD</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="job-title">QA Engineer</span>
+                <span class="date-range">Sep 2021 - Dec 2021</span>
+            </div>
+            <div class="company">Causeway Connect · Full-time · Skopje</div>
+            <p class="job-description">Developed automation solutions using C#/.NET stack with behavior-driven development practices.</p>
+            <p class="tech-stack">C#, .NET Framework, SpecFlow, NUnit, Selenium WebDriver</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="job-title">QA Engineer</span>
+                <span class="date-range">Sep 2021 - Dec 2021</span>
+            </div>
+            <div class="company">CRMT Digital · Full-time · Skopje</div>
+            <p class="job-description">Built automation frameworks and contributed to software development initiatives using modern methodologies.</p>
+            <p class="tech-stack">C#, .NET Framework, SpecFlow, Agile Methodologies</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="job-title">QA Manual Software Tester</span>
+                <span class="date-range">Dec 2020 - Dec 2021</span>
+            </div>
+            <div class="company">dimITrycode · Contract · Gevgelija</div>
+            <p class="job-description">Started my QA career focusing on software lifecycle understanding and manual testing practices.</p>
+            <p class="tech-stack">SDLC, Manual Testing, Test Case Design, Agile Methodologies</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>AI & Automation</h4>
+                <p>Agentic AI, RAG, Knowledge Graph NLP, N8n, Claude Code, MCP</p>
+            </div>
+            <div class="skill-category">
+                <h4>Cloud & Infrastructure</h4>
+                <p>GCP, Amazon Bedrock, Docker, Supabase, Airtable</p>
+            </div>
+            <div class="skill-category">
+                <h4>Development</h4>
+                <p>Python, C#/.NET, OOP, HTML/CSS/JS, jQuery, SQL/MySQL</p>
+            </div>
+            <div class="skill-category">
+                <h4>Tools & Frameworks</h4>
+                <p>Selenium, Robot Framework, SpecFlow/Gherkin, NUnit, Appium, Jenkins/GoCD</p>
+            </div>
+            <div class="skill-category">
+                <h4>Integrations & APIs</h4>
+                <p>Stripe, ElevenLabs, Lovable AI, Veo3, Blotato</p>
+            </div>
+            <div class="skill-category">
+                <h4>Methodologies</h4>
+                <p>Agile, BDD, TDD, CI/CD Pipelines, SDLC</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-section">
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-title">Diploma of Education, Medicine</div>
+            <div class="education-school">Universitatea OVIDIUS din Constanta</div>
+            <div class="education-date">2011 - 2015</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages-grid">
+                <div class="language-item"><span class="language-name">English</span> - <span class="language-level">Native/Bilingual</span></div>
+                <div class="language-item"><span class="language-name">Macedonian</span> - <span class="language-level">Native/Bilingual</span></div>
+                <div class="language-item"><span class="language-name">Romanian</span> - <span class="language-level">Native/Bilingual</span></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-list">
+                <p><strong>CSTE</strong> — Brainster</p>
+                <p><strong>LinkedIn:</strong> MySQL, JSON, OOP, Agile, C#/.NET</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -51,6 +51,10 @@ nginx-configs/
 
 # Infrastructure documentation with sensitive data
 nginx implementation plan.md
+vps-infrastructure-guide.md
+
+# Windows artifacts
+nul
 
 # Image backups (original unoptimized images)
 /image-backups

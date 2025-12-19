@@ -103,10 +103,10 @@ const MyPage = () => {
 								}}>
 								<Button variation="primary">
 									<Link
-										href={"/cv.pdf"}
+										href={"/Timi-Olumcev-CV.pdf"}
 										target="_blank"
 										rel="noopener noreferrer"
-										download>
+										download="Timi-Olumcev-CV.pdf">
 										Download CV
 									</Link>
 								</Button>
