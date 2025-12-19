@@ -20,8 +20,11 @@ concurrency:
 env:
   NODE_VERSION: '20'
   PNPM_VERSION: '9'
-  DEPLOY_PATH: /var/www/portfolio
-  PM2_APP_NAME: portfolio
+  # New OpenLiteSpeed infrastructure paths
+  PROJECT_DIR: /home/webapps/olumchev.com
+  APP_DIR: /home/webapps/olumchev.com/app
+  PROJECT_NAME: olumchev
+  INTERNAL_PORT: 3001
 
 jobs:
   build:
@@ -118,7 +121,7 @@ jobs:
 
       - name: Generate release timestamp
         id: timestamp
-        run: echo "RELEASE_ID=$(date +%Y%m%d_%H%M%S)" >> $GITHUB_OUTPUT
+        run: echo "RELEASE_ID=$(date +%Y%m%d-%H%M%S)" >> $GITHUB_OUTPUT
 
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.9.0
@@ -132,13 +135,13 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no \
             ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-            "mkdir -p ${{ env.DEPLOY_PATH }}/releases/${{ steps.timestamp.outputs.RELEASE_ID }}"
+            "mkdir -p ${{ env.APP_DIR }}/releases/${{ steps.timestamp.outputs.RELEASE_ID }}"
 
       - name: Upload deployment artifact
         run: |
           scp -o StrictHostKeyChecking=no \
             deployment.tar.gz \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ env.DEPLOY_PATH }}/releases/${{ steps.timestamp.outputs.RELEASE_ID }}/
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ env.APP_DIR }}/releases/${{ steps.timestamp.outputs.RELEASE_ID }}/
 
       - name: Deploy and activate release
         run: |
@@ -147,10 +150,12 @@ jobs:
 
           set -e
 
-          DEPLOY_PATH="${{ env.DEPLOY_PATH }}"
+          PROJECT_DIR="${{ env.PROJECT_DIR }}"
+          APP_DIR="${{ env.APP_DIR }}"
           RELEASE_ID="${{ steps.timestamp.outputs.RELEASE_ID }}"
-          RELEASE_PATH="${DEPLOY_PATH}/releases/${RELEASE_ID}"
-          PM2_APP_NAME="${{ env.PM2_APP_NAME }}"
+          RELEASE_PATH="${APP_DIR}/releases/${RELEASE_ID}"
+          PROJECT_NAME="${{ env.PROJECT_NAME }}"
+          INTERNAL_PORT="${{ env.INTERNAL_PORT }}"
 
           echo "=== Deploying release: ${RELEASE_ID} ==="
 
@@ -161,60 +166,69 @@ jobs:
           rm deployment.tar.gz
 
           echo "Installing production dependencies..."
+          export NVM_DIR="/usr/local/nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           CI=true pnpm install --prod --frozen-lockfile
 
+          echo "Linking environment config..."
+          ln -sfn "${PROJECT_DIR}/config/.env" "${RELEASE_PATH}/.env"
+
+          echo "Saving release metadata..."
+          cat > "${RELEASE_PATH}/.release-info" << EOF
+          RELEASE_NAME=${RELEASE_ID}
+          GIT_COMMIT=${{ github.sha }}
+          DEPLOYED_AT=$(date -Iseconds)
+          DEPLOYED_BY=github-actions
+          EOF
+
           echo "Swapping symlink to new release..."
-          ln -sfn "${RELEASE_PATH}" "${DEPLOY_PATH}/current_new"
-          mv -Tf "${DEPLOY_PATH}/current_new" "${DEPLOY_PATH}/current"
+          ln -sfn "${RELEASE_PATH}" "${APP_DIR}/current_new"
+          mv -Tf "${APP_DIR}/current_new" "${APP_DIR}/current"
 
-          echo "Restarting PM2 application..."
-          cd "${DEPLOY_PATH}/current"
-
-          # Use the root user's PM2 (not /tmp/.pm2)
-          export PM2_HOME=/root/.pm2
-
-          # Restart or start the portfolio app
-          pm2 delete ${PM2_APP_NAME} 2>/dev/null || true
-          PORT=3002 pm2 start "pnpm next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
-          pm2 save
+          echo "Restarting systemd service..."
+          sudo systemctl restart ${PROJECT_NAME}
 
           echo "Waiting for application to be ready..."
-          sleep 8
+          sleep 5
 
           echo "Running health check..."
-          # Simple health check - just verify the port is listening
-          if ss -tlnp | grep -q ":3002"; then
-            echo "Port 3002 is listening"
-            HEALTH_CHECK="200"
+          HEALTH_URL="http://127.0.0.1:${INTERNAL_PORT}/api/health"
+          HEALTH_STATUS=$(curl -sf -o /dev/null -w "%{http_code}" "${HEALTH_URL}" 2>/dev/null || echo "000")
+
+          if [ "$HEALTH_STATUS" = "200" ]; then
+            echo "Health check passed! (HTTP ${HEALTH_STATUS})"
           else
-            HEALTH_CHECK="000"
+            # Fallback: check if port is listening
+            if ss -tlnp | grep -q ":${INTERNAL_PORT}"; then
+              echo "Port ${INTERNAL_PORT} is listening (health endpoint may not be ready yet)"
+              HEALTH_STATUS="200"
+            else
+              HEALTH_STATUS="000"
+            fi
           fi
 
-          if [ "$HEALTH_CHECK" != "200" ]; then
-            echo "ERROR: Health check failed - port 3002 not listening"
+          if [ "$HEALTH_STATUS" != "200" ]; then
+            echo "ERROR: Health check failed - service not responding"
             echo "Rolling back to previous release..."
 
-            PREV_RELEASE=$(ls -1t "${DEPLOY_PATH}/releases" | head -2 | tail -1)
+            PREV_RELEASE=$(ls -1t "${APP_DIR}/releases" | head -2 | tail -1)
             if [ -n "$PREV_RELEASE" ] && [ "$PREV_RELEASE" != "$RELEASE_ID" ]; then
-              ln -sfn "${DEPLOY_PATH}/releases/${PREV_RELEASE}" "${DEPLOY_PATH}/current_new"
-              mv -Tf "${DEPLOY_PATH}/current_new" "${DEPLOY_PATH}/current"
-              pm2 delete ${PM2_APP_NAME} 2>/dev/null || true
-              cd "${DEPLOY_PATH}/current"
-              PORT=3002 pm2 start "pnpm next start -p 3002" --name ${PM2_APP_NAME} --cwd "${DEPLOY_PATH}/current"
-              pm2 save
+              ln -sfn "${APP_DIR}/releases/${PREV_RELEASE}" "${APP_DIR}/current_new"
+              mv -Tf "${APP_DIR}/current_new" "${APP_DIR}/current"
+              sudo systemctl restart ${PROJECT_NAME}
               echo "Rolled back to: ${PREV_RELEASE}"
             fi
             exit 1
           fi
 
-          echo "Health check passed!"
-
           echo "Cleaning up old releases (keeping last 5)..."
-          cd "${DEPLOY_PATH}/releases"
+          cd "${APP_DIR}/releases"
           ls -1t | tail -n +6 | xargs -r rm -rf
 
           echo "=== Deployment complete! ==="
           echo "Active release: ${RELEASE_ID}"
+          echo "Service status:"
+          sudo systemctl status ${PROJECT_NAME} --no-pager || true
 
           DEPLOY_SCRIPT
 
