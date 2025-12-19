@@ -143,6 +143,8 @@ export default function Education() {
 										width={400}
 										height={225}
 										alt="Graduation Hats"
+										placeholder="blur"
+										sizes="(max-width: 768px) 100vw, 33vw"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
@@ -152,6 +154,8 @@ export default function Education() {
 										width={400}
 										height={225}
 										alt="Diploma"
+										placeholder="blur"
+										sizes="(max-width: 768px) 100vw, 33vw"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>
@@ -161,6 +165,8 @@ export default function Education() {
 										width={400}
 										height={225}
 										alt="University"
+										placeholder="blur"
+										sizes="(max-width: 768px) 100vw, 33vw"
 										className="rounded-lg w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out"
 									/>
 								</div>

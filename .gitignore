@@ -51,3 +51,6 @@ nginx-configs/
 
 # Infrastructure documentation with sensitive data
 nginx implementation plan.md
+
+# Image backups (original unoptimized images)
+/image-backups
