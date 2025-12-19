@@ -46,7 +46,12 @@ export const metadata = {
 				alt: "Timi Olumcev Portfolio",
 			},
 		],
-		site_name: "Timi Olumcev | Portfolio",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Timi Olumcev | Portfolio",
+		description: "Full Stack AI Developer specializing in AI-powered solutions and intelligent automation.",
+		images: ["/og-image-rev.png"],
 	}
 };
 
